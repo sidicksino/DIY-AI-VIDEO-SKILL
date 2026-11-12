@@ -1,0 +1,46 @@
+{
+  "output": "output/final.mp4",
+  "music": "music/(Put On Your) Dancing Pants - Reed Mathis.mp3",
+  "music_db": -18,
+  "clip_db": -2,
+  "grain": 2,
+  "logo": "brand/logo.png",
+  "logo_y": 0.1,
+  "hook": {
+    "text": "He was hiding in the cold…",
+    "end": 2.4
+  },
+  "loop": 0.4,
+  "segments": [
+    {
+      "clip": "clips/C0.mp4",
+      "start": 3.0,
+      "end": 5.0,
+      "label": "HOOK: hedgehog curled in the cold"
+    },
+    {
+      "clip": "clips/C1.mp4",
+      "start": 1.5,
+      "end": 4.0,
+      "label": "cut a doorway in the basket"
+    },
+    {
+      "clip": "clips/C2.mp4",
+      "start": 1.0,
+      "end": 3.5,
+      "label": "brush cement into the weave"
+    },
+    {
+      "clip": "clips/C3.mp4",
+      "start": 0.5,
+      "end": 3.0,
+      "label": "press moss on top"
+    },
+    {
+      "clip": "clips/C4.mp4",
+      "start": 0.0,
+      "end": 6.0,
+      "label": "PAYOFF: hedgehog moves in"
+    }
+  ]
+}

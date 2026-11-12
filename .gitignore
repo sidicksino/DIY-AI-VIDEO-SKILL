@@ -1,0 +1,26 @@
+# Secrets — never commit
+.env
+.env.*
+
+# Python / OS
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Large media stays local (GitHub rejects files > 100 MB; the repo is for the pipeline)
+renders/
+references/*
+!references/README.md
+music/*
+!music/README.md
+
+# Generated per-project media: keep plans, manuals, edits and post copy; drop frames/clips/videos
+projects/*/frames/
+projects/*/clips/
+projects/*/output/
+projects/*/work/
+projects/*/work-*/
+*.mp4
+*.mov
+*.webm
