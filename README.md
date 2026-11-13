@@ -10,8 +10,11 @@ brand/      channel.md (setup + copy), luna.md (character prompts),
             realism-playbook.md, logo, watermark, banner, avatar
 ideas/      log.md (every idea ever, never repeat), shortlist-*.md, ideas.md
 projects/   one folder per video: plan.md, edit.json, frames/, clips/, output/
-tools/      assemble.py (edit), review.py (frame-by-frame check), branding.py, ...
+tools/      assemble.py (edit), review.py (frame-by-frame check), flow_frames.py (frames in Flow),
+            analyze_ref.py (split a reference video into shots), branding.py, ...
 music/      YouTube Audio Library tracks only
+same-idea/  videos to remake with /same-idea (git-ignored)
+references/ Instagram reference compilations (git-ignored)
 ```
 
 ## Skills
@@ -25,6 +28,11 @@ music/      YouTube Audio Library tracks only
   Flow via flow-auto: hero (approve) → stage frames (approve) → Veo clips,
   each checked and saved into the project. Free plan: keep the Flow tab visible
   and the Flow Connector side panel open.
+
+- **/same-idea** (`.claude/skills/same-idea/`) — remake a DIY video you liked:
+  drop it in `same-idea/` (optional `<same-name>.txt` with your changes), run
+  /same-idea. It splits the video into shots (`tools/analyze_ref.py`) and writes a
+  Luna project with the same shots and pacing, our character, place and design.
 
 ## Making a video
 

@@ -24,3 +24,7 @@ projects/*/work-*/
 *.mp4
 *.mov
 *.webm
+
+# same-idea: reference videos and their analysis stay local
+same-idea/*
+!same-idea/README.md
