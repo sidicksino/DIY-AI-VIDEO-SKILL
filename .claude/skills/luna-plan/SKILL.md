@@ -113,9 +113,46 @@ Luna is in the final frame **at most every other video**.
 | `orbit` | The camera circles the finished piece in its place; no person | Start from the hero without Luna; handheld or gimbal arc, one continuous move |
 | `pull-back` | Starts close on a detail, pulls back and up to show the whole luxury setting | Start on a detail frame; the clip ends wide (end frame = the wide hero) |
 | `use` | Someone uses it: sits, puts a drink down, places a plant, a pet settles | Luna, a guest or an animal; one action |
-| `lights-on` | Static wide shot; the lights come on or day turns to dusk | Start and end frames are the same framing, lights off → on |
+| `lights-on` | The lights come on or day turns to dusk, with a gentle glide or push-in (not locked) | Start and end frames are the same framing, lights off → on; the camera move goes in the prompt |
 | `walk-away` | Luna walks out of frame; the piece stays, beautifully placed | End frame without Luna |
 | `match-cut` | The same framing cuts from the junk or empty spot to the finished piece | Two frames with identical framing; the edit cuts between them |
+
+
+## 2d. Camera language (required: the video must be ready to publish without extra editing)
+
+Real DIY Shorts aren't one fixed wide shot. Every plan includes:
+
+1. **Insert close-ups: 2–3 per project** (1 per project in a compilation),
+   on the most satisfying details: a blade cutting, a trowel digging, hands
+   lowering or pressing something, a pour, a texture being smoothed, glass or
+   gravel close up.
+   - Each insert is its own clip with its own start frame `In-<name>`.
+   - That frame is **one edit of the stage frame it belongs to**: "the same
+     moment seen as a macro close-up from about 30 cm, shallow depth of field,
+     same light and materials". This is allowed on top of a stage frame.
+   - In the edit, an insert sits between the wide shots of that step and is
+     usually 0.6–1.2 s.
+2. **Camera move per clip type** (write it into the CAPTURE line of the video
+   prompt):
+
+   | Clip | Camera |
+   |---|---|
+   | Build step (wide) | Tripod, fixed framing |
+   | Insert | Macro close-up, almost still; a **focus pull** from foreground to the detail, or a tiny push-in |
+   | Human moment (planting, placing, reacting) | Subtle handheld, a gentle push-in toward the hands |
+   | **Ending** | **Always a camera move:** a gimbal glide/push along the piece, a pull-back and rise (crane), or an orbit. A static ending only for a deliberate match-cut |
+   | Lights-on | Combine it with a gentle glide or push-in, not a locked shot |
+
+3. **Prompt vocabulary for Veo** (no "slowly"; use "gentle", "steady",
+   "smooth"):
+   - "smooth gimbal shot gliding forward along …"
+   - "camera pulls back and rises to reveal …"
+   - "steady orbit around …"
+   - "macro close-up, shallow depth of field, focus shifts from … to …"
+   - "gentle handheld push-in toward her hands"
+4. The **reference ending** in `/same-idea` is copied as a camera move (the
+   analysis tool measures it). Never replace a moving ending with a static
+   one.
 
 ## 3. Story beats (16–30 s final video)
 
@@ -229,6 +266,7 @@ Go through the plan and confirm every item:
 - [ ] Object sizes, colours and shapes are written the same way in every
       prompt
 - [ ] The junk is still recognisable and has a job
+- [ ] Camera (2d): 2–3 inserts per project with In-* frames; the ending clip has a camera move; build steps on a tripod
 - [ ] Placement passes 2b: it has a job, a backdrop and dressing, and is framed as the subject
 - [ ] The ending style differs from the previous video's; Luna isn't in the last frame two videos running
 - [ ] Every clip prompt has the EXCLUDE line (no music, voices or text)

@@ -1,0 +1,70 @@
+{
+  "output": "output/final.mp4",
+  "music": "music/Sunset Strut - Dan Lebowitz.mp3",
+  "music_db": -18,
+  "clip_db": -2,
+  "grain": 2,
+  "logo": "brand/logo.png",
+  "logo_y": 0.1,
+  "hook": {
+    "text": "This boring strip of grass…",
+    "end": 2.2
+  },
+  "loop": 0.4,
+  "segments": [
+    {
+      "clip": "clips/C8.mp4",
+      "start": 6.0,
+      "end": 7.4,
+      "label": "HOOK: finished border glowing at dusk"
+    },
+    {
+      "clip": "clips/C1.mp4",
+      "start": 2.0,
+      "end": 4.5,
+      "label": "dig out the turf"
+    },
+    {
+      "clip": "clips/C2.mp4",
+      "start": 2.4,
+      "end": 4.8,
+      "label": "roll out the fabric"
+    },
+    {
+      "clip": "clips/C3.mp4",
+      "start": 2.0,
+      "end": 3.8,
+      "label": "metal edge"
+    },
+    {
+      "clip": "clips/C4.mp4",
+      "start": 3.0,
+      "end": 5.4,
+      "label": "lay the river curve"
+    },
+    {
+      "clip": "clips/C5.mp4",
+      "start": 1.2,
+      "end": 4.0,
+      "label": "plant the boxwood ball"
+    },
+    {
+      "clip": "clips/C6.mp4",
+      "start": 4.4,
+      "end": 6.8,
+      "label": "rake honey gravel"
+    },
+    {
+      "clip": "clips/C7.mp4",
+      "start": 2.0,
+      "end": 5.6,
+      "label": "SATISFYING: pour the sea-glass river"
+    },
+    {
+      "clip": "clips/C8.mp4",
+      "start": 0.7,
+      "end": 7.0,
+      "label": "REVEAL: lights on at dusk (lights-on, nobody)"
+    }
+  ]
+}

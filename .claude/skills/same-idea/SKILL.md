@@ -37,6 +37,9 @@ Then **Read** these files in `same-idea/_analysis/<video>/`:
 - `shots.jpg`: every shot in order, with times
 - `timeline.jpg`: what moves inside each shot
 - any `shot_NN.jpg` you need at full size
+- the printed **camera** column (also in `shots.json`): static, push-in,
+  pull-out, pan, tilt, orbit/arc or handheld, with the zoom % and travel.
+  These are measured, not guessed
 
 Write a **reference breakdown** (it goes into plan.md, section
 "Reference"):
@@ -47,7 +50,7 @@ Write a **reference breakdown** (it goes into plan.md, section
   and stop until they answer.
 - **For the chosen project, one row per shot:** #, time, what we see
   (object and state), the single action, camera (wide, medium, close-up,
-  top-down; static or moving), and its role (hook, junk, build step,
+  top-down) **plus the measured camera move**, and its role (hook, junk, build step,
   satisfying moment, reveal, ending).
 - **What makes it work:** the hook in the first 2 s, the most satisfying
   shot, the reveal place, the ending.
@@ -61,11 +64,19 @@ clips.
   Our edit can still cut in on the close-up if Veo gives one. Aim for 5–8
   clips per project.
 - **Keep** their order, pacing and type of reveal.
+- **Keep their camera language** (luna-plan §2d):
+  - every close-up cut-in in the reference becomes an **insert** clip
+    (`In-*` frame) in ours
+  - every measured move (push-in, pull-back, orbit, handheld) goes into
+    that clip's CAPTURE line
+  - **their ending move is copied**, e.g. "the camera glides forward along
+    the finished border". Never end on a locked shot when they move
 - **Apply the changes:** Luna, a location from `brand/locations.md` (the
   closest match to theirs), and the design change from the note (or your
   proposal).
 - **Then run our quality gates on the remake**, exactly as `/luna-plan`
   does:
+  - camera language: inserts and a moving ending (luna-plan §2d)
   - the shape test (the object's shape makes the result)
   - the placement check (the piece sits where it belongs)
   - an ending style different from the previous video's

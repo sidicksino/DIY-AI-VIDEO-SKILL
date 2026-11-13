@@ -101,6 +101,7 @@ sparkles."*
 - **Anchors** (H-hero, B-hero, Pn-H, Pn-B): **Nano Banana Pro**, downloaded at the **largest size offered (2K)**. Stage edits can stay on Nano Banana 2.
 - **Video: set 1080p BEFORE generating.** Flow defaults to 720p (the composer pill reads "Video · 720p · 8s"). Click it and choose **1080p**, or **4K** if your plan offers it. Download at the same size. Upscaling a 720p file later can't add real detail.
 - **Veo 3.1 Quality** for the reveal/ending clip and any close-up of the finished piece; **Veo 3.1 Fast** for build steps.
+- **Camera language:** 2–3 macro insert close-ups per project (focus pull, shallow depth of field) and a **moving ending** (glide, pull-back, orbit), never a locked last shot (luna-plan §2d).
 - **Framing for detail:** AI video loses fine detail in wide shots. Keep the subject large: medium shots for build steps, close-ups for the material moments (pours, textures, glow), at most one wide establishing shot.
 - Simple motion keeps detail: one action, steady tripod, no fast whip pans.
 

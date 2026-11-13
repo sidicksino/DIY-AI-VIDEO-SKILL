@@ -33,6 +33,11 @@ before spending credits", and **section 6, Quality**) and `brand/luna.md`.
   references, waits, saves `frames/raw/` and writes clean `frames/*.png`.
 - **Clips:** 1080p, chosen before generating; Veo Quality for the reveal.
 - **Watermark:** none on Flow downloads, so use files as downloaded, with no clean step.
+- **Insert close-ups (`In-*` frames):** make each one as an edit of its stage frame
+  (`tools/flow_frames.py ... In-cut:S6-plant,luna`), after the stage frames pass
+  review. Check that it shows the same objects, colours and gloves as its stage
+  frame, only closer.
+
 
 **Resume, don't redo.** Before generating each file, check whether it
 already exists in `frames/` or `clips/`. If it does, skip it. That way a
