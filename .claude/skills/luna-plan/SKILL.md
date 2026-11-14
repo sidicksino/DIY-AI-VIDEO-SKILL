@@ -110,10 +110,10 @@ Luna is in the final frame **at most every other video**.
 
 | Key | Ending | How to make it |
 |---|---|---|
-| `orbit` | The camera circles the finished piece in its place; no person | Start from the hero without Luna; handheld or gimbal arc, one continuous move |
+| `orbit` | The camera circles the finished piece in its place; no person | Start from the hero without Luna; smooth gimbal arc, one continuous move, no shake |
 | `pull-back` | Starts close on a detail, pulls back and up to show the whole luxury setting | Start on a detail frame; the clip ends wide (end frame = the wide hero) |
 | `use` | Someone uses it: sits, puts a drink down, places a plant, a pet settles | Luna, a guest or an animal; one action |
-| `lights-on` | The lights come on or day turns to dusk, with a gentle glide or push-in (not locked) | Start and end frames are the same framing, lights off → on; the camera move goes in the prompt |
+| `lights-on` | The lights come on at dusk while the camera glides forward along the piece through the place (not locked, not a zoom) | Start frame only (lights off, at the near end of the piece); **no end frame**, because the same framing at both ends locks the camera. The travel and the lights going on go in the prompt |
 | `walk-away` | Luna walks out of frame; the piece stays, beautifully placed | End frame without Luna |
 | `match-cut` | The same framing cuts from the junk or empty spot to the finished piece | Two frames with identical framing; the edit cuts between them |
 
@@ -138,18 +138,31 @@ Real DIY Shorts aren't one fixed wide shot. Every plan includes:
    | Clip | Camera |
    |---|---|
    | Build step (wide) | Tripod, fixed framing |
-   | Insert | Macro close-up, almost still; a **focus pull** from foreground to the detail, or a tiny push-in |
-   | Human moment (planting, placing, reacting) | Subtle handheld, a gentle push-in toward the hands |
-   | **Ending** | **Always a camera move:** a gimbal glide/push along the piece, a pull-back and rise (crane), or an orbit. A static ending only for a deliberate match-cut |
-   | Lights-on | Combine it with a gentle glide or push-in, not a locked shot |
+   | Insert | Macro close-up on a tripod, camera still; only the **focus shifts** from foreground to the detail. No zoom, no shake |
+   | Human moment (planting, placing, reacting) | Tripod, still camera (or cut to an insert for the detail). **No handheld, no shake** |
+   | **Ending** | **Always a camera move that shows the place:** the camera itself travels (gimbal walk forward along the piece, pull-back and rise, or orbit) so the viewer sees the whole setting around the piece: house, terrace, lawn, hedge, room. A static ending only for a deliberate match-cut |
+   | Lights-on | The lights come on **while the camera travels** along the piece through the place, not a locked shot |
+
+   **Ending move: show the place, don't inspect the piece.** The last move
+   starts at one end of what she built and travels all the way to the other
+   end, so the viewer sees the whole environment she made. It moves *through* the setting, like walking down the garden path with a
+   gimbal: the piece passes under the camera, and the house, lawn and hedge
+   open up. Never:
+   - a zoom or push-in onto the piece (it looks like checking a detail)
+   - **any shake**: handheld wobble, jitter or peeking around. The move is
+     smooth and steady from the first frame to the last, like a gimbal or a
+     slider
+   - a locked tripod shot
+   Give a travelling ending a **start frame only** (or an end frame that is
+   clearly wider or further along). Never the same framing at both ends:
+   that forces Veo to hold the camera still.
 
 3. **Prompt vocabulary for Veo** (no "slowly"; use "gentle", "steady",
    "smooth"):
-   - "smooth gimbal shot gliding forward along …"
+   - "smooth gimbal shot, the camera walks forward low along the whole border toward the hedge, revealing the garden and the villa" (ending)
    - "camera pulls back and rises to reveal …"
    - "steady orbit around …"
    - "macro close-up, shallow depth of field, focus shifts from … to …"
-   - "gentle handheld push-in toward her hands"
 4. The **reference ending** in `/same-idea` is copied as a camera move (the
    analysis tool measures it). Never replace a moving ending with a static
    one.
@@ -210,7 +223,7 @@ STABILITY · LOOK · AUDIO · EXCLUDE.
   moments (pour, texture, glow), at most one wide shot per project. AI video
   loses detail when the subject is small in the frame.
 - Tripod and fixed framing for build steps. The ending follows its style
-  (2c): an orbit, a pull-back, a static lights-on shot, and so on.
+  (2c): an orbit, a pull-back, a travelling lights-on shot, and so on.
 - Under ~120 words.
 - **Resolution:** every clip at **1080p** (written into MANUAL.md as "set
   before you generate").
@@ -233,8 +246,7 @@ STABILITY · LOOK · AUDIO · EXCLUDE.
    ```json
    {
      "output": "output/final.mp4",
-     "music": "music/<pick a track from music/ that fits the mood>",
-     "music_db": -18, "clip_db": -2, "grain": 5,
+     "clip_db": 0, "grain": 3,
      "logo": "brand/logo.png", "logo_y": 0.10,
      "hook": {"text": "<4-6 words that stop the scroll, e.g. She was freezing in the rain…>", "end": 2.4},
      "loop": 0.4,
@@ -244,6 +256,10 @@ STABILITY · LOOK · AUDIO · EXCLUDE.
      ]
    }
    ```
+
+   **No music.** Leave `music` out: the video keeps Flow's own sound (cutting,
+   tapping, pouring, birds) exactly as generated. Only add a track when the
+   user asks for one for that video.
 
    `hook` is the on-screen caption for the first 2.4 s: most people scroll on
    mute, so these words decide the swipe. Write the problem ("They had nowhere
@@ -266,7 +282,8 @@ Go through the plan and confirm every item:
 - [ ] Object sizes, colours and shapes are written the same way in every
       prompt
 - [ ] The junk is still recognisable and has a job
-- [ ] Camera (2d): 2–3 inserts per project with In-* frames; the ending clip has a camera move; build steps on a tripod
+- [ ] Camera (2d): 2–3 inserts per project with In-* frames; the ending clip has a camera move; build steps on a tripod; the ending travels smoothly through the whole place; no handheld shake anywhere
+- [ ] Sound: no music in edit.json; Flow's own sound is kept as generated
 - [ ] Placement passes 2b: it has a job, a backdrop and dressing, and is framed as the subject
 - [ ] The ending style differs from the previous video's; Luna isn't in the last frame two videos running
 - [ ] Every clip prompt has the EXCLUDE line (no music, voices or text)

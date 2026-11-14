@@ -3,8 +3,8 @@
 Join generated clips into one finished vertical Short.
 
 Reads <project>/edit.json, trims each segment, fits it to 1080x1920, joins
-the segments in the order given, lays a music bed under the clips' own sound,
-adds the logo and normalises loudness to -14 LUFS.
+the segments in the order given, keeps the clips' own sound (an optional
+"music" bed is only added when edit.json asks for it), adds the logo and normalises loudness to -14 LUFS.
 
 Paths in edit.json: clips and output are relative to the project folder;
 music and logo are relative to the repo root.

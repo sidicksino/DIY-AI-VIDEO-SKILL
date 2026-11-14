@@ -13,7 +13,7 @@ shot**, then hand over to the normal pipeline.
 
 | Keep (copy freely) | Always change |
 |---|---|
-| Structure and order of shots, method (dip, pour, mould, melt…), pacing, total length, type of reveal | **Character:** Luna (`brand/luna.md`). **Place:** one of `brand/locations.md`. **At least one design choice:** colour, finish, shape or object (the user's note decides; if there's no note, propose one). **Title, hook text, music, caption:** always ours |
+| Structure and order of shots, method (dip, pour, mould, melt…), pacing, total length, type of reveal | **Character:** Luna (`brand/luna.md`). **Place:** one of `brand/locations.md`. **At least one design choice:** colour, finish, shape or object (the user's note decides; if there's no note, propose one). **Title, hook text, caption:** always ours (no music: we keep Flow's own sound) |
 
 **Never reuse** their footage, frames, music, voice, on-screen text,
 watermark or title. The remake is fully generated from our own prompts.
@@ -67,10 +67,16 @@ clips.
 - **Keep their camera language** (luna-plan §2d):
   - every close-up cut-in in the reference becomes an **insert** clip
     (`In-*` frame) in ours
-  - every measured move (push-in, pull-back, orbit, handheld) goes into
+  - every measured move (forward, pull-back, orbit) goes into
     that clip's CAPTURE line
-  - **their ending move is copied**, e.g. "the camera glides forward along
-    the finished border". Never end on a locked shot when they move
+  - **their ending move is copied**, e.g. "the camera walks forward low
+    along the finished border toward the hedge, revealing the garden". A
+    measured "push-in" at the end is almost always the camera **travelling
+    through the place** (check `shot_NN.jpg`/timeline: does the background
+    open up?), so write it as a gimbal walk-forward, never a zoom. Never end
+    on a locked shot when they move
+  - **never copy shake.** A measured `handheld` shot becomes a tripod shot
+    (or a smooth gimbal move if it travels). Our camera never wobbles
 - **Apply the changes:** Luna, a location from `brand/locations.md` (the
   closest match to theirs), and the design change from the note (or your
   proposal).
@@ -98,7 +104,7 @@ Follow `/luna-plan` sections 4–7 (read
 - **`MANUAL.md`:** the clips for the user, with the 1080p settings line.
 - **`edit.json`:** the same segment order and roughly the same timing as
   the reference (their shot lengths are your first trims), plus our hook
-  text, loop and music.
+  text and loop. No music: Flow's own sound stays.
 - **`post.md`:** our own title, description, tags, and Instagram and TikTok
   captions. Never their title.
 - **`ideas/log.md`:** add a row with status `picked` and these tags:

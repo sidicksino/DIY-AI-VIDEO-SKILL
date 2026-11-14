@@ -68,7 +68,7 @@ def camera_move(video, start, end):
     zoom = (scale - 1) * 100
     travel = (dx ** 2 + dy ** 2) ** 0.5
     if zoom > 6:
-        label = "push-in"
+        label = "push-in/forward"
     elif zoom < -6:
         label = "pull-out"
     elif travel > 60 and abs(dx) >= abs(dy):

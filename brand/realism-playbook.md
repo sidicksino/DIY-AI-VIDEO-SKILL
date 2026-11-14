@@ -56,7 +56,7 @@ sparkles."*
 ## 3. Video recipe (Veo 3.1 Fast, Frames with start + end)
 
 ```
-[CAPTURE]  Vertical smartphone video <on a tripod, fixed framing | handheld with subtle natural shake>, real-time speed, one continuous shot.
+[CAPTURE]  Vertical smartphone video <on a tripod, fixed framing | on a smooth gimbal, the camera travels steadily …>, real-time speed, one continuous shot.
 [ACTION]  <who> <one physical action with force and weight verbs>, <what the material does>, <how it ends — matching the end frame>.
 [STABILITY]  <the things that must not change>, e.g. "The dome stays exactly the same shape and size."
 [LOOK]  Natural motion blur on fast movements, true-to-life colors, no color grading, late-afternoon sun from camera left.
@@ -65,7 +65,8 @@ sparkles."*
 ```
 
 - **Tripod** for build steps — it's how real DIY creators film, and a still
-  camera hides small glitches. **Subtle handheld** only for the payoff.
+  camera hides small glitches. The only moving shot is the **ending**: a smooth
+  gimbal move through the place. **Never handheld shake.**
 - Describe **the end state** in the action so it agrees with the end frame.
 - Keep the prompt under ~120 words. Longer prompts get ignored in places.
 - Download **1080p**.
@@ -91,9 +92,9 @@ sparkles."*
 
 ## 5. In the edit (Claude)
 
-- Light moving grain (`"grain": 5` in `edit.json`) — takes the clean AI sheen off
+- Light moving grain (`"grain": 3` in `edit.json`) — takes the clean AI sheen off
 - 1–2 s shots, cut before any glitch
-- Loudness to −14 LUFS; music quiet under the real sounds
+- **No music**: keep Flow's own sound (cuts, taps, pours, birds) as generated; loudness to −14 LUFS
 
 ## 6. Quality: settings that decide sharpness (2026-11-12)
 
