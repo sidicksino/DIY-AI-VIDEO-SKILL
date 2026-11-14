@@ -235,7 +235,13 @@ def main():
         # centred; 70% down by default (below the action, above the Shorts
         # caption area). "logo_y" moves it when the subject sits there.
         logo_y = edit.get("logo_y", 0.70)
-        filters.append(f"[{n}:v]scale={int(W * 0.42)}:-1,format=rgba[lg];"
+        # soft by default: semi-transparent and slightly blurred, so it reads
+        # as a quiet signature, not a sticker. "logo_opacity" / "logo_blur" override.
+        op = float(edit.get("logo_opacity", 0.45))
+        bl = float(edit.get("logo_blur", 1.2))
+        soft = f",gblur=sigma={bl}" if bl > 0 else ""
+        filters.append(f"[{n}:v]scale={int(W * 0.42)}:-1,format=rgba{soft},"
+                       f"colorchannelmixer=aa={op}[lg];"
                        f"{base}[lg]overlay=(W-w)/2:H*{logo_y}[v]")
         video = "[v]"
     elif logo:

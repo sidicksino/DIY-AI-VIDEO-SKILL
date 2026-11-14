@@ -214,6 +214,25 @@ Each image needs:
 Each clip goes **from one stage image to the next**:
 `C1: S1 → S2`, `C2: S2 → S3`, … then `Cn: reveal → H-hero (payoff)`.
 
+**Start and end frames must tell the clip's story, nothing else** (user, 2026-11-14):
+- **The first frame is the empty place plus the junk in Luna's hands**, e.g.
+  a bare wall while she carries the tyre. Never start with the junk already
+  in position.
+- **An end frame shows only the result of that clip's action**, with the
+  tool from that same action. If the next step needs a new tool or material
+  in her hands (a plank, a brush, a reel), give the next clip **its own start
+  frame**. The cut hides the swap. Never put the next step's tool in an end
+  frame, or Veo morphs one action into the other.
+- So a clip is a **pair**, `Ck: Ak-start → Ak-end`. Reuse the previous end
+  frame as the next start only when her hands hold the same thing.
+- **An insert sits inside its own step**: wide start of the step → insert
+  close-up → wide end of the same step. It must not show something that
+  happens after the next wide clip.
+- **Constant backdrop:** write in the fixed description exactly what shows
+  behind or inside the piece (e.g. "the green wall shows through the
+  circle") and repeat it in every frame prompt. Don't add backing boards,
+  panels or fills that the junk stage doesn't have.
+
 Write each video prompt with the playbook's video recipe: CAPTURE · ACTION ·
 STABILITY · LOOK · AUDIO · EXCLUDE.
 - **One verb-action.** Never use "then" or "and then". If you need two
@@ -279,6 +298,7 @@ Go through the plan and confirm every item:
 - [ ] Every stage image is one edit from the HERO, with no chains
 - [ ] Every clip has exactly one action, and its start and end frames exist
       in the image list
+- [ ] Frames: the first frame is the empty place + junk in hand; no end frame holds the next step's tool; inserts sit inside their own step; the backdrop behind/inside the piece is the same in every frame
 - [ ] Object sizes, colours and shapes are written the same way in every
       prompt
 - [ ] The junk is still recognisable and has a job

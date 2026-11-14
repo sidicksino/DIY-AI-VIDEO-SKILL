@@ -1,0 +1,76 @@
+{
+  "output": "output/final.mp4",
+  "clip_db": 0,
+  "grain": 3,
+  "logo": "brand/logo.png",
+  "logo_y": 0.1,
+  "loop": 0.4,
+  "segments": [
+    {
+      "clip": "clips/C10.mp4",
+      "start": 6.3,
+      "end": 7.7,
+      "label": "HOOK: glowing display in the dark bedroom"
+    },
+    {
+      "clip": "clips/C1.mp4",
+      "start": 0.3,
+      "end": 2.6,
+      "label": "carry the tyre to the bare wall"
+    },
+    {
+      "clip": "clips/C2.mp4",
+      "start": 1.4,
+      "end": 2.4,
+      "label": "INSERT drill macro"
+    },
+    {
+      "clip": "clips/C3.mp4",
+      "start": 2.6,
+      "end": 4.6,
+      "label": "tyre hangs on its own"
+    },
+    {
+      "clip": "clips/C4.mp4",
+      "start": 0.5,
+      "end": 3.8,
+      "label": "slide the shelves in"
+    },
+    {
+      "clip": "clips/C5.mp4",
+      "start": 1.0,
+      "end": 3.0,
+      "label": "honey-oak stain"
+    },
+    {
+      "clip": "clips/C6.mp4",
+      "start": 2.4,
+      "end": 4.2,
+      "label": "LED strip round the rim"
+    },
+    {
+      "clip": "clips/C7.mp4",
+      "start": 1.6,
+      "end": 2.5,
+      "label": "INSERT LED macro"
+    },
+    {
+      "clip": "clips/C8.mp4",
+      "start": 4.9,
+      "end": 7.7,
+      "label": "SATISFYING: cars fill the shelves"
+    },
+    {
+      "clip": "clips/C9.mp4",
+      "start": 0.6,
+      "end": 2.0,
+      "label": "INSERT car macro"
+    },
+    {
+      "clip": "clips/C10.mp4",
+      "start": 0.3,
+      "end": 7.6,
+      "label": "ENDING: pull-back through the bedroom (nobody)"
+    }
+  ]
+}
