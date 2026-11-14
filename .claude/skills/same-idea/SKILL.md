@@ -13,7 +13,7 @@ shot**, then hand over to the normal pipeline.
 
 | Keep (copy freely) | Always change |
 |---|---|
-| Structure and order of shots, method (dip, pour, mould, melt…), pacing, total length, type of reveal | **Character:** Luna (`brand/luna.md`). **Place:** one of `brand/locations.md`. **At least one design choice:** colour, finish, shape or object (the user's note decides; if there's no note, propose one). **Title, hook text, caption:** always ours (no music: we keep Flow's own sound) |
+| Structure and order of shots, method (dip, pour, mould, melt…), pacing, total length, type of reveal | **Character:** Luna (`brand/luna.md`). **Place:** one of `brand/locations.md`. **At least one design choice:** colour, finish, shape or object (the user's note decides; if there's no note, propose one). **Title and caption:** always ours (no music: we keep Flow's own sound; no on-screen text, ever) |
 
 **Never reuse** their footage, frames, music, voice, on-screen text,
 watermark or title. The remake is fully generated from our own prompts.
@@ -73,10 +73,10 @@ clips.
     along the finished border toward the hedge, revealing the garden". A
     measured "push-in" at the end is almost always the camera **travelling
     through the place** (check `shot_NN.jpg`/timeline: does the background
-    open up?), so write it as a gimbal walk-forward, never a zoom. Never end
+    open up?), so write it as a smooth forward glide of the camera (never the word "gimbal"), never a zoom. Never end
     on a locked shot when they move
   - **never copy shake.** A measured `handheld` shot becomes a tripod shot
-    (or a smooth gimbal move if it travels). Our camera never wobbles
+    (or a smooth steady camera move if it travels). Our camera never wobbles
 - **Apply the changes:** Luna, a location from `brand/locations.md` (the
   closest match to theirs), and the design change from the note (or your
   proposal).
@@ -103,8 +103,8 @@ Follow `/luna-plan` sections 4–7 (read
   frame or clip) and the "Changed vs the reference" list.
 - **`MANUAL.md`:** the clips for the user, with the 1080p settings line.
 - **`edit.json`:** the same segment order and roughly the same timing as
-  the reference (their shot lengths are your first trims), plus our hook
-  text and loop. No music: Flow's own sound stays.
+  the reference (their shot lengths are your first trims), plus the loop.
+  No hook text or any on-screen text, and no music: Flow's own sound stays.
 - **`post.md`:** our own title, description, tags, and Instagram and TikTok
   captions. Never their title.
 - **`ideas/log.md`:** add a row with status `picked` and these tags:

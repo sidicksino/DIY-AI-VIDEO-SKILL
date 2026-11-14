@@ -56,17 +56,18 @@ sparkles."*
 ## 3. Video recipe (Veo 3.1 Fast, Frames with start + end)
 
 ```
-[CAPTURE]  Vertical smartphone video <on a tripod, fixed framing | on a smooth gimbal, the camera travels steadily …>, real-time speed, one continuous shot.
+[CAPTURE]  Vertical smartphone video <on a tripod, fixed framing | the camera glides smoothly and steadily …>, real-time speed, one continuous shot.
 [ACTION]  <who> <one physical action with force and weight verbs>, <what the material does>, <how it ends — matching the end frame>.
 [STABILITY]  <the things that must not change>, e.g. "The dome stays exactly the same shape and size."
 [LOOK]  Natural motion blur on fast movements, true-to-life colors, no color grading, late-afternoon sun from camera left.
 [AUDIO]  SFX: <2–3 specific sounds>. Ambient: birds, light breeze.
-[EXCLUDE]  No music, no voices, no on-screen text.
+[EXCLUDE]  No music, no voices, no on-screen text. (Moving shots add: No camera equipment in the frame.)
 ```
 
 - **Tripod** for build steps — it's how real DIY creators film, and a still
   camera hides small glitches. The only moving shot is the **ending**: a smooth
-  gimbal move through the place. **Never handheld shake.**
+  steady camera move through the place. **Never handheld shake.**
+- **Never name camera gear in a video prompt** (gimbal, stabiliser, rig, phone on a stick): Veo shows it in the shot (019 C8, 2026-11-14). Describe only how the view moves: "the camera glides smoothly …".
 - Describe **the end state** in the action so it agrees with the end frame.
 - Keep the prompt under ~120 words. Longer prompts get ignored in places.
 - Download **1080p**.

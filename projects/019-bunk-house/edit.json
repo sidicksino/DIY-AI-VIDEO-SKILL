@@ -1,0 +1,76 @@
+{
+  "output": "output/final.mp4",
+  "clip_db": 0,
+  "grain": 3,
+  "logo": "brand/logo.png",
+  "logo_y": 0.1,
+  "loop": 0.4,
+  "segments": [
+    {
+      "clip": "clips/C8.mp4",
+      "start": 0.3,
+      "end": 1.5,
+      "label": "HOOK: finished bunk house at dusk"
+    },
+    {
+      "clip": "clips/C1.mp4",
+      "start": 0.1,
+      "end": 1.4,
+      "label": "empty room, rusty bunk in parts (time-lapse)"
+    },
+    {
+      "clip": "clips/C1.mp4",
+      "start": 2.3,
+      "end": 3.5,
+      "label": "old frame stands against the wall"
+    },
+    {
+      "clip": "clips/C2.mp4",
+      "start": 1.0,
+      "end": 2.0,
+      "label": "INSERT bolt macro"
+    },
+    {
+      "clip": "clips/C3.mp4",
+      "start": 1.4,
+      "end": 3.2,
+      "label": "plywood shell grows (time-lapse)"
+    },
+    {
+      "clip": "clips/C3.mp4",
+      "start": 6.2,
+      "end": 7.4,
+      "label": "shell finished"
+    },
+    {
+      "clip": "clips/C4.mp4",
+      "start": 0.3,
+      "end": 1.3,
+      "label": "INSERT drill macro"
+    },
+    {
+      "clip": "clips/C5.mp4",
+      "start": 2.0,
+      "end": 4.6,
+      "label": "SATISFYING: velvet padding (time-lapse)"
+    },
+    {
+      "clip": "clips/C6.mp4",
+      "start": 1.6,
+      "end": 2.6,
+      "label": "INSERT velvet macro"
+    },
+    {
+      "clip": "clips/C7.mp4",
+      "start": 4.6,
+      "end": 7.0,
+      "label": "beds made"
+    },
+    {
+      "clip": "clips/C8.mp4",
+      "start": 0.3,
+      "end": 5.9,
+      "label": "ENDING: orbit at dusk (nobody)"
+    }
+  ]
+}

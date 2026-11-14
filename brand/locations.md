@@ -23,6 +23,7 @@ luxury place.
 | `luxury-bathroom` | **Reveal** place for floors, sinks, tiles | a bright luxury bathroom with a white freestanding stone bathtub, large windows with a garden view, fluted oak cabinetry, brass taps, folded white towels and a tall green plant |
 | `luxury-kitchen` | **Reveal** place for splashbacks, countertops, kitchen pieces | a modern luxury kitchen with a long white marble island, warm oak cabinets, a brass tap and pendant lights, soft morning light from a big window |
 | `rooftop` | Night lighting, lamps, small luxury builds | a modern rooftop terrace at a city apartment with wooden decking, potted olive trees, glass railings and a city skyline behind, at dusk turning to evening |
+| `kids-bedroom` | Build **and** reveal place for kids' furniture and room builds | a large bright child's bedroom in a luxury home: pale warm-grey walls, a high white ceiling, soft light-grey carpet, a tall window with sheer white curtains on the left wall and a white panelled door on the right wall |
 
 ## Rules
 - **One build location + one reveal location per project.** Never move

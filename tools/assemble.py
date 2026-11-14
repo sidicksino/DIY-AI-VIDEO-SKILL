@@ -10,7 +10,7 @@ Paths in edit.json: clips and output are relative to the project folder;
 music and logo are relative to the repo root.
 
 Optional in edit.json:
-    "hook": {"text": "She was freezing in the rain…", "end": 2.4}
+    "hook": {...}   legacy only; the channel never uses on-screen text (2026-11-14)
         Big rounded caption in the first seconds (most people scroll on mute;
         the words are what stop them). Fades in at 0.1 s, out at "end".
     "loop": 0.4

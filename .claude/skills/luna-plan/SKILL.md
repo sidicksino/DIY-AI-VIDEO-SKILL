@@ -110,7 +110,7 @@ Luna is in the final frame **at most every other video**.
 
 | Key | Ending | How to make it |
 |---|---|---|
-| `orbit` | The camera circles the finished piece in its place; no person | Start from the hero without Luna; smooth gimbal arc, one continuous move, no shake |
+| `orbit` | The camera circles the finished piece in its place; no person | Start from the hero without Luna; a smooth steady arc, one continuous move, no shake |
 | `pull-back` | Starts close on a detail, pulls back and up to show the whole luxury setting | Start on a detail frame; the clip ends wide (end frame = the wide hero) |
 | `use` | Someone uses it: sits, puts a drink down, places a plant, a pet settles | Luna, a guest or an animal; one action |
 | `lights-on` | The lights come on at dusk while the camera glides forward along the piece through the place (not locked, not a zoom) | Start frame only (lights off, at the near end of the piece); **no end frame**, because the same framing at both ends locks the camera. The travel and the lights going on go in the prompt |
@@ -159,7 +159,8 @@ Real DIY Shorts aren't one fixed wide shot. Every plan includes:
 
 3. **Prompt vocabulary for Veo** (no "slowly"; use "gentle", "steady",
    "smooth"):
-   - "smooth gimbal shot, the camera walks forward low along the whole border toward the hedge, revealing the garden and the villa" (ending)
+   - "the camera glides smoothly forward, low along the whole border toward the hedge, revealing the garden and the villa" (ending)
+   - **Never write "gimbal", "stabiliser", "rig" or "phone" in a video prompt.** Veo puts the gear in the shot (019 C8 showed a phone on a gimbal). Describe only how the view moves, and end every moving prompt with "No camera equipment in the frame."
    - "camera pulls back and rises to reveal …"
    - "steady orbit around …"
    - "macro close-up, shallow depth of field, focus shifts from … to …"
@@ -267,7 +268,6 @@ STABILITY · LOOK · AUDIO · EXCLUDE.
      "output": "output/final.mp4",
      "clip_db": 0, "grain": 3,
      "logo": "brand/logo.png", "logo_y": 0.10,
-     "hook": {"text": "<4-6 words that stop the scroll, e.g. She was freezing in the rain…>", "end": 2.4},
      "loop": 0.4,
      "segments": [
        { "clip": "clips/C6.mp4", "start": 3.0, "end": 4.5, "label": "HOOK: …" },
@@ -280,10 +280,10 @@ STABILITY · LOOK · AUDIO · EXCLUDE.
    tapping, pouring, birds) exactly as generated. Only add a track when the
    user asks for one for that video.
 
-   `hook` is the on-screen caption for the first 2.4 s: most people scroll on
-   mute, so these words decide the swipe. Write the problem ("They had nowhere
-   to swim…") or a promise ("Wait for the peel…"); no emoji. `loop` dissolves the
-   ending into the opening frame so the Short replays seamlessly.
+   **No on-screen text, ever** (user, 2026-11-14): never add a `hook` caption.
+   The opening shot (a flash of the finished piece) is the hook on its own.
+   `loop` dissolves the ending into the opening frame so the Short replays
+   seamlessly.
    Trim times are first guesses. The assemble step fixes them after looking
    at the real clips.
 5. **Update the log.** In `ideas/log.md`, set the idea's status to `picked`,
@@ -304,6 +304,7 @@ Go through the plan and confirm every item:
 - [ ] The junk is still recognisable and has a job
 - [ ] Camera (2d): 2–3 inserts per project with In-* frames; the ending clip has a camera move; build steps on a tripod; the ending travels smoothly through the whole place; no handheld shake anywhere
 - [ ] Sound: no music in edit.json; Flow's own sound is kept as generated
+- [ ] No `hook` key and no on-screen text in edit.json
 - [ ] Placement passes 2b: it has a job, a backdrop and dressing, and is framed as the subject
 - [ ] The ending style differs from the previous video's; Luna isn't in the last frame two videos running
 - [ ] Every clip prompt has the EXCLUDE line (no music, voices or text)
