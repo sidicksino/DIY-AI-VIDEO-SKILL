@@ -33,6 +33,9 @@ references/ Instagram reference compilations (git-ignored)
   drop it in `same-idea/` (optional `<same-name>.txt` with your changes), run
   /same-idea. It splits the video into shots (`tools/analyze_ref.py`) and writes a
   Luna project with the same shots and pacing, our character, place and design.
+- **/luna-score** (`.claude/skills/luna-score/`) — scores a finished video
+  against the researched growth rules in `brand/growth-playbook.md`
+  (`tools/score_video.py`) and lists what to fix before posting.
 
 ## Making a video
 

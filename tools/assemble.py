@@ -6,6 +6,9 @@ Reads <project>/edit.json, trims each segment, fits it to 1080x1920, joins
 the segments in the order given, keeps the clips' own sound (an optional
 "music" bed is only added when edit.json asks for it), adds the logo and normalises loudness to -14 LUFS.
 
+Prints a pace report and warns when the edit breaks the growth rules in
+brand/growth-playbook.md (opening, shot length, total length, beat count).
+
 Paths in edit.json: clips and output are relative to the project folder;
 music and logo are relative to the repo root.
 
@@ -106,6 +109,36 @@ def cut(seg, project, dest, clip_db):
 HOOK_FONT = "/System/Library/Fonts/Supplemental/Arial Rounded Bold.ttf"
 
 
+def pace_report(edit, lengths):
+    """Warn when the edit breaks the growth rules (brand/growth-playbook.md)."""
+    segs = edit["segments"]
+    total = sum(lengths)
+    warn = []
+    first = (segs[0].get("label") or "").lower()
+    if any(w in first for w in ("hook", "finished", "reveal", "hero", "result")):
+        warn.append("opening: the first segment looks like the finished piece. "
+                    "Open on Luna in action (R1)")
+    last = len(segs) - 1
+    for i, (seg, n) in enumerate(zip(segs, lengths)):
+        label = (seg.get("label") or "").lower()
+        if i == last:
+            if n > 3.6:
+                warn.append(f"ending: segment {i} is {n:.1f}s, keep it to 3.5s (R6)")
+        elif n > 2.6 and "time-lapse" not in label and "timelapse" not in label:
+            warn.append(f"pace: segment {i} is {n:.1f}s, split it into 1-2s beats (R4)")
+    if not (15 <= total <= 22 or 45 <= total <= 62):
+        warn.append(f"length: {total:.1f}s is outside Quick build 15-22s and "
+                    f"Big transformation 45-60s (R7)")
+    need = 8 if total <= 30 else 20
+    if len(segs) < need:
+        warn.append(f"beats: {len(segs)} segments, aim for {need}+ at this length (R5)")
+    print(f"\n  pace: {len(segs)} beats, {total:.1f}s, {total / len(segs):.2f}s per beat")
+    for w in warn:
+        print(f"  ! {w}")
+    if not warn:
+        print("  growth rules: ok")
+
+
 def render_hook(text, dest):
     """White rounded caption with a dark outline, centred, on a transparent 1080x1920 PNG."""
     from PIL import Image, ImageDraw, ImageFont
@@ -167,13 +200,15 @@ def main():
     out = project / edit.get("output", "output/final.mp4")
     out.parent.mkdir(parents=True, exist_ok=True)
 
-    parts, total = [], 0.0
+    parts, total, lengths = [], 0.0, []
     for i, seg in enumerate(edit["segments"]):
         dest = work / f"seg{i:02d}.mp4"
         length = cut(seg, project, dest, edit.get("clip_db", 0))
         parts.append(dest)
+        lengths.append(length)
         total += length
         print(f"  {i:2d}  {length:5.2f}s  {seg['clip']:<16} {seg.get('label', '')}")
+    pace_report(edit, lengths)
 
     listing = work / "concat.txt"
     listing.write_text("".join(f"file '{p}'\n" for p in parts))

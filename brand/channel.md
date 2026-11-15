@@ -5,9 +5,13 @@
 **Luna Upcycles** — handle `@lunaupcycles` (unused on YouTube when checked,
 2026-09-14; claim it first).
 
-Named after the character, the way Ava-DIY is. Descriptions can then tell a
-story — *"Luna found old rain boots and turned them into…"* — and the name
-survives any project: planters, bird baths, pet houses, ponds.
+Named after the character, the way Ava-DIY is. The name survives any
+project, so it stays even though the channel grew from garden pieces into
+furniture, glowing displays, room makeovers and garden builds (2026-11-14).
+
+**Positioning (2026-11-14):** *Old junk → luxury builds.* Every profile, bio
+and footer says this, not "garden". Banner: `brand/banner-v2.png` (three of
+our finished pieces: bunk house, tyre display, glass river).
 
 ## YouTube — create the channel
 
@@ -20,7 +24,7 @@ survives any project: planters, bird baths, pet houses, ponds.
 4. **Studio → Customisation → Profile** → **Publish** (top right)
    - Name: Luna Upcycles · Handle: `@lunaupcycles` (done 2026-09-14)
    - Description: paste the About text below
-   - Banner and profile picture: made in Flow, see [luna.md](luna.md)
+   - Banner: `brand/banner-v2.png` (check the phone crop with `banner-v2-phone-preview.png`). Profile picture: Luna's avatar, see [luna.md](luna.md)
    - Video watermark (the corner subscribe icon): Luna's avatar, later
 5. **Studio → Settings → Channel → Basic info** → **Save**
    - Country of residence
@@ -37,33 +41,50 @@ survives any project: planters, bird baths, pet houses, ponds.
 1. Sign up (email or phone). Username `lunaupcycles`, name **Luna Upcycles**.
 2. Keep it a **Personal** account (Creator Rewards needs Personal, not
    Business).
-3. Bio: `Old junk → garden magic 🌿 New project daily`
+3. Bio: `Old junk → luxury builds ✨ Furniture · rooms · gardens · New build daily`
 4. Avatar: the same image as YouTube.
 5. **Every post:** *More options → AI-generated content* **on**.
 
+## Instagram — profile
+
+- **Name** (searchable, so it carries the niche): `Luna Upcycles | Junk to Luxury`
+- **Username:** `lunaupcycles`
+- **Category:** Digital creator
+- **Bio** (150 characters max):
+  ```
+  Old junk → luxury builds ✨
+  Furniture · glowing decor · room makeovers · gardens
+  New transformation every day 👇
+  ```
+- **Link:** the YouTube channel.
+- **Every Reel:** AI label **on**.
+
 ## About (YouTube description)
 
-> Old junk. Wet concrete. Something beautiful for the garden.
+> Old junk. Real tools. Something luxurious.
 >
-> Luna takes the things people throw away — rain boots, tires, teapots, old
-> baskets — and turns them into garden pieces for the birds, pets and
-> backyard animals that move in at the end.
+> Luna takes the things people throw away — rusty bunk beds, old bike tyres,
+> bottle caps, broken glass, worn-out furniture — and turns them into luxury
+> pieces: furniture, glowing displays, room makeovers and garden builds.
 >
-> New project every day.
+> Every video is one full transformation, from junk to the finished room.
+> New build every day.
 >
-> Videos on this channel are made with AI, for entertainment and ideas.
+> Videos on this channel are made with AI, for entertainment and inspiration.
 
 ## Keywords
 
+From the research in [keywords.md](keywords.md) (2026-11-14):
+
 ```
-upcycling, concrete diy, cement craft, garden diy, garden decor, diy bird bath, diy planter, backyard diy, recycled crafts, satisfying diy, concrete crafts, garden ideas
+luna upcycles, upcycling, trash to treasure diy, upcycle furniture, diy home projects, budget home makeover, room transformation, home decor ideas, bedroom makeover, furniture making, how to upcycle, repurpose, junk to luxury
 ```
 
 ## Description footer (upload default)
 
 ```
 ━━━━━━━━━━━━━━━━━━━━
-🌿 New garden project every day — subscribe so you don't miss the next one.
+✨ New build every day — subscribe so you don't miss the next transformation.
 
 This video is AI-generated and is for entertainment and inspiration.
 ━━━━━━━━━━━━━━━━━━━━
@@ -71,12 +92,11 @@ This video is AI-generated and is for entertainment and inspiration.
 
 ## Rules for every video
 
-- Title under ~60 characters. Formula that works in this niche:
-  *"I Filled [old thing] With Concrete… Then Made THIS [emoji]"* or
-  *"From [junk] to a [luxury garden thing]"*.
-- End on an animal enjoying the finished piece. The four biggest examples
-  (88M, 52M, 36M, 28M) all end on the payoff; animals appear in the top ones.
-- Luna looks the same in every clip — same hair, same outfit, same garden.
+- Title under ~60 characters: *"I Turned [old thing] Into [luxury result] [emoji]"*.
+- End on the payoff, with the ending style rotated (luna-plan §2c). No
+  on-screen text, no music: Flow's own sound.
+- Luna looks the same in every clip: same face, hair and outfit. The place
+  changes per project (`brand/locations.md`).
 - Never reuse another channel's footage or copy one of their exact projects.
 - Vary the projects. YouTube's inauthentic-content policy targets channels
   that post the same template over and over.

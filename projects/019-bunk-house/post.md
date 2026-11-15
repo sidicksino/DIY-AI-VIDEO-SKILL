@@ -1,5 +1,6 @@
 # Upload copy — 019-bunk-house
 
+Copy follows `brand/keywords.md` (researched 2026-11-14).
 Everywhere: AI use / AI label **on** · Paid promotion **No** · Language **English** · Howto & Style · not made for kids.
 
 ## YouTube Shorts
@@ -9,15 +10,19 @@ I Turned an Old Rusty Bunk Bed Into a Dream Kids' Room 🏠
 ```
 **Description**
 ```
-A rusty old metal bunk bed → a padded sage-velvet bunk house with a star-lit canopy, a cosy den and curved stairs 🏠✨
+A rusty old bunk bed → a sage-velvet bunk house with a star-lit canopy, a cosy den and curved stairs. Full room transformation, start to finish 🏠✨
 
-New project every day 🛠️ Subscribe for more of Luna's builds.
+━━━━━━━━━━━━━━━━━━━━
+✨ New build every day — subscribe so you don't miss the next transformation.
 
-#diy #upcycling #kidsroom #bunkbed #satisfying #shorts
+This video is AI-generated and is for entertainment and inspiration.
+━━━━━━━━━━━━━━━━━━━━
+
+#upcycling #transformation #diyhome #bedroommakeover #shorts
 ```
 **Tags**
 ```
-bunk bed makeover, kids room ideas, upcycled bunk bed, bunk bed house, kids bedroom makeover, velvet bed, dream bedroom, upcycling ideas, satisfying diy, room transformation, luna upcycles
+luna upcycles, upcycling, trash to treasure diy, diy home projects, transformation, room transformation, bedroom makeover, building my dream room, budget home makeover, dream room, kids room makeover
 ```
 
 ## Instagram Reels
@@ -26,13 +31,13 @@ This rusty old bunk bed → a dream bunk house 🏠 Watch it fill the room…
 
 Would your kids sleep in this? 👇
 
-#diy #upcycling #kidsroom #bunkbed #satisfying
+#upcycling #diytransformation #beforeandafter #dreamroom
 ```
 AI label **on**. Cover: the bunk house glowing at dusk.
 
 ## TikTok
 ```
-Rusty bunk bed → dream bunk house 🏠 #diy #upcycling #kidsroom #roommakeover
+Rusty bunk bed → dream bunk house 🏠 #diytransformation #upcycling #beforeandafter #roommakeover
 ```
 AI-generated content **on**.
 

@@ -1,5 +1,6 @@
 # Upload copy — 018-tyre-car-display
 
+Copy follows `brand/keywords.md` (researched 2026-11-14).
 Everywhere: AI use / AI label **on** · Paid promotion **No** · Language **English** · Howto & Style · not made for kids.
 
 ## YouTube Shorts
@@ -9,15 +10,19 @@ I Turned an Old Bike Tyre Into a Glowing Car Display 🚗
 ```
 **Description**
 ```
-An old bike tyre → a round wall shelf with honey-oak shelves, a hidden LED ring and a whole collection of toy cars… wait for the night shot 🚗✨
+An old bike tyre → a glowing wall display for a whole toy-car collection. Honey-oak shelves, a hidden LED ring, full bedroom transformation 🚗✨
 
-New project every day 🛠️ Subscribe for more of Luna's builds.
+━━━━━━━━━━━━━━━━━━━━
+✨ New build every day — subscribe so you don't miss the next transformation.
 
-#diy #upcycling #bedroomdecor #hotwheels #satisfying #shorts
+This video is AI-generated and is for entertainment and inspiration.
+━━━━━━━━━━━━━━━━━━━━
+
+#upcycling #transformation #diyhome #bedroommakeover #shorts
 ```
 **Tags**
 ```
-bike tyre shelf, upcycled tire, toy car display, die cast display, diy wall shelf, led shelf, bedroom makeover, upcycling ideas, satisfying diy, room decor, luna upcycles
+luna upcycles, upcycling, trash to treasure diy, diy home projects, transformation, upcycle furniture, furniture making, diy furniture, bedroom makeover, diy lamp, toy car display
 ```
 
 ## Instagram Reels
@@ -26,13 +31,13 @@ This old bike tyre → a glowing car display 🚗 Wait for the night shot…
 
 Who needs this for their collection? 👇
 
-#diy #upcycling #bedroomdecor #diecast #satisfying
+#upcycling #diytransformation #beforeandafter #dreamroom
 ```
 AI label **on**. Cover: the display glowing in the dark bedroom.
 
 ## TikTok
 ```
-Old bike tyre → glowing car display 🚗 wait for the night shot #diy #upcycling #roomdecor #diecast
+Old bike tyre → glowing car display 🚗 wait for the night shot #diytransformation #upcycling #beforeandafter #dreamroom
 ```
 AI-generated content **on**.
 

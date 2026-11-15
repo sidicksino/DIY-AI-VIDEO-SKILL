@@ -32,6 +32,8 @@ Read these before writing anything:
   location per video. Use wider full-body framing for big builds.
 - `brand/realism-playbook.md`: **every** prompt follows its image recipe,
   video recipe, banned words and checklists.
+- `brand/growth-playbook.md`: the researched rules R1–R10 (opening, pace,
+  reason, ending, formats). Section 3 below applies them.
 - The idea's row in the shortlist, plus the reference videos listed there.
 - `ideas/log.md`: why earlier ideas were rejected, so you don't repeat those
   mistakes.
@@ -58,6 +60,14 @@ Before writing prompts, write the concept in these lines, in this order:
 - **Placement:** exactly where the finished piece lives in its reveal place,
   and why a real designer would put it there (see section 2b).
 - **Ending:** which ending style closes the video (see section 2c).
+- **Format:** Quick build (15–22 s) or Big transformation (45–60 s). See
+  section 3.
+- **Opening action:** what Luna is already doing in frame 0, and the first
+  tool-on-junk contact that has started by 1.0 s. It must be step one of the
+  build, and it must be striking. If step one is dull, change the build.
+- **Reason:** who or what the piece is for, shown in one beat without words
+  (a pet with no bed, a guest with nowhere to sit, a dull corner), and how
+  the ending closes it.
 
 Check the concept against these hard rules. If one fails, fix the concept
 before going further:
@@ -107,6 +117,12 @@ never the piece.
 Pick one per video. Read the `end:` tags of the last 3 made or picked videos
 in `ideas/log.md`, and **don't repeat the style of the previous video**.
 Luna is in the final frame **at most every other video**.
+
+**Use beat (required, growth rule R6).** Whatever the ending style, the
+last 3–4 s include someone using or reacting to the piece: Luna, a guest, a
+child or a pet (rotate them). With a travelling ending that has no person
+(`orbit`, `lights-on`, `pull-back`), put a 1.5–2 s use beat just before the
+travel. The travel itself is at most 3.5 s in the edit.
 
 | Key | Ending | How to make it |
 |---|---|---|
@@ -168,18 +184,34 @@ Real DIY Shorts aren't one fixed wide shot. Every plan includes:
    analysis tool measures it). Never replace a moving ending with a static
    one.
 
-## 3. Story beats (16–30 s final video)
+## 3. Story beats (from `brand/growth-playbook.md`)
+
+**Pick the format first.**
+
+| Format | Final length | Beats | Clips | Use for |
+|---|---|---|---|---|
+| **Quick build** | 15–22 s | 8–12 | 7–9 | one object |
+| **Big transformation** | 45–60 s | 20–30 | 12–16 | a whole room, yard, terrace or wreck, with a reason |
+
+A **beat** is one visible change, 1–2 s long. One 8 s Veo clip usually
+gives 1–3 beats (use 2–3 short trims from a clip, never one long trim).
 
 | Beat | Time | Content |
 |---|---|---|
-| **Hook** | 0–2 s | Either a flash of the finished piece with the animal, or the problem in a story idea (kitten shivering in the rain) |
-| **Junk** | ~2 s | The raw junk on the workbench, so it's recognisable |
-| **Build** | 10–18 s | 4–6 steps, **one physical action each** |
-| **Reveal** | ~2 s | The finished piece in place |
-| **Ending** | 3–5 s | The chosen ending style (2c), in the checked placement (2b). This is the shot people rewatch |
+| **Open** | 0–1.5 s | **Luna already in action** on the junk or the empty place: movement within 0.5 s, first tool-on-junk contact by 1.0 s. For a reason-led video, the problem beat goes here instead. **Never the finished piece** |
+| **Reason** | 1.5–3 s inside the first 4 s | Who or what it is for, shown without words. May be the Open itself |
+| **Build** | the middle | Quick: 6–9 beats. Big: 16–24 beats. **One physical action each**, a visible change every 1–2 s, inserts on the most satisfying moments |
+| **Reveal** | ~1.5 s | The finished piece in place. Its first appearance in the video |
+| **Use** | 1.5–2 s | Someone uses it or reacts. This closes the reason |
+| **Ending** | at most 3.5 s | The chosen ending style (2c) in the checked placement (2b) |
 
-Plan **6–8 clips** in total. Each clip is 8 s in Veo, but only 1.5–3 s of it
-ends up in the edit.
+**Pace rules.**
+- No shot longer than 2.5 s in the edit. The only exception is a
+  fixed-camera time-lapse clip in which something new appears every second.
+- The finished piece is not shown before the last third.
+- The story stays in order. The opening is step one of the build, already
+  in motion.
+- Every beat has its own clear sound (see the AUDIO line in section 5).
 
 ## 4. Frames: build them from the hero, never chain them
 
@@ -238,6 +270,12 @@ Write each video prompt with the playbook's video recipe: CAPTURE · ACTION ·
 STABILITY · LOOK · AUDIO · EXCLUDE.
 - **One verb-action.** Never use "then" or "and then". If you need two
   actions, make two clips.
+- **The action starts at once.** Write the clip so the tool is already
+  touching the material in its first second. A clip that spends 2 s walking
+  up or lining up gives nothing to the edit.
+- **AUDIO names one loud, clear sound** for the action (saw buzz, drill
+  whirr, concrete pour, tape snap, thud). The breakouts carry a distinct
+  sound on every beat.
 - Describe the end state so it matches the end frame.
 - **Framing for detail:** medium shots for build steps, close-ups for material
   moments (pour, texture, glow), at most one wide shot per project. AI video
@@ -270,8 +308,9 @@ STABILITY · LOOK · AUDIO · EXCLUDE.
      "logo": "brand/logo.png", "logo_y": 0.10,
      "loop": 0.4,
      "segments": [
-       { "clip": "clips/C6.mp4", "start": 3.0, "end": 4.5, "label": "HOOK: …" },
-       { "clip": "clips/C1.mp4", "start": 0.5, "end": 2.5, "label": "…" }
+       { "clip": "clips/C1.mp4", "start": 0.6, "end": 2.0, "label": "OPEN: … (action from frame 0)" },
+       { "clip": "clips/C1.mp4", "start": 4.1, "end": 5.4, "label": "…" },
+       { "clip": "clips/C2.mp4", "start": 1.0, "end": 2.0, "label": "INSERT …" }
      ]
    }
    ```
@@ -281,7 +320,13 @@ STABILITY · LOOK · AUDIO · EXCLUDE.
    user asks for one for that video.
 
    **No on-screen text, ever** (user, 2026-11-14): never add a `hook` caption.
-   The opening shot (a flash of the finished piece) is the hook on its own.
+   The opening is Luna in action (section 3). **Never put a flash of the
+   finished piece in front** (research 2026-11-15: 0 of 27 breakouts do).
+   The first segment's label starts with `OPEN:` and its `start` is trimmed
+   into the action, so frame 0 is already moving. No segment is longer than
+   2.5 s except a time-lapse clip or the ending (at most 3.5 s).
+   `assemble.py` prints a pace report and warns about every break of these
+   rules.
    `loop` dissolves the ending into the opening frame so the Short replays
    seamlessly.
    Trim times are first guesses. The assemble step fixes them after looking
@@ -305,6 +350,8 @@ Go through the plan and confirm every item:
 - [ ] Camera (2d): 2–3 inserts per project with In-* frames; the ending clip has a camera move; build steps on a tripod; the ending travels smoothly through the whole place; no handheld shake anywhere
 - [ ] Sound: no music in edit.json; Flow's own sound is kept as generated
 - [ ] No `hook` key and no on-screen text in edit.json
+- [ ] Growth rules: format chosen (Quick 15–22 s / Big 45–60 s); the first segment is `OPEN:` with action from frame 0; the finished piece first appears in the last third; a reason beat in the first 4 s; a use beat near the end; no segment over 2.5 s (time-lapse and ending excepted); ending at most 3.5 s; beat count fits the format
+- [ ] Every clip's AUDIO line names one clear sound, and its action starts in the first second
 - [ ] Placement passes 2b: it has a job, a backdrop and dressing, and is framed as the subject
 - [ ] The ending style differs from the previous video's; Luna isn't in the last frame two videos running
 - [ ] Every clip prompt has the EXCLUDE line (no music, voices or text)
@@ -321,3 +368,5 @@ Keep it short:
 
 Then ask the user to approve the plan, or say what to change. When they
 approve, the next step is `/luna-generate`. Don't start generating yourself.
+After the video is assembled, `/luna-score` checks it against the growth
+rules before posting.

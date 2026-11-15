@@ -12,15 +12,20 @@ Written to [the realism playbook](../../brand/realism-playbook.md).
 - **Finished piece:** <what, size, materials, finish>
 - **The junk's job:** <how its shape survives and what it does>
 - **Payoff:** <animal + exactly what it does>
+- **Format:** <Quick build 15–22 s | Big transformation 45–60 s>
+- **Opening action:** <what Luna is doing in frame 0; first tool-on-junk contact by 1.0 s>
+- **Reason:** <who or what it is for, shown without words; how the ending closes it>
 
 ## Beats
 
 | # | Beat | Clip | What the viewer sees | Seconds used |
 |---|---|---|---|---|
-| 1 | Hook | C<n> | … | 1.5 |
-| 2 | Junk | C1 | … | 2 |
-| … | | | | |
-| n | Payoff | C<n> | … | 4 |
+| 1 | Open (action from frame 0) | C1 | … | 1.4 |
+| 2 | Reason | C1 | … | 1.5 |
+| … | Build beats, 1–2 s each | | | |
+| n-2 | Reveal (first sight of the finished piece) | C<n> | … | 1.5 |
+| n-1 | Use | C<n> | … | 2 |
+| n | Ending | C<n> | … | 3.5 max |
 
 Total ≈ <xx> s.
 
@@ -75,6 +80,10 @@ Keep everything exactly the same — same camera angle, framing, light, colors, 
 
 ## Upload copy
 
-- **Title:** …
-- **Description:** 2 lines + 3–5 hashtags
+Follow `brand/keywords.md` (researched 2026-11-14) for every line below.
+
+- **Title:** one of the breakout patterns ("I Turned [junk] Into [luxury result] [emoji]", "From [junk] to [result]", "[junk] did NOT deserve to be thrown away 😳"…), under ~60 characters, junk word first
+- **Description:** first line = the promise with 1–2 search keywords, then the channel footer, then 3–5 hashtags from the YouTube set
+- **Tags:** the 5 always-tags + the category set
+- **Instagram / TikTok captions:** short promise + the platform's hashtag set (no #fyp/#viral)
 - **Disclosure:** Altered or synthetic content: Yes

@@ -22,6 +22,8 @@ Read these files from the project root:
 - `brand/luna.md` (Luna) and `brand/realism-playbook.md` (what AI can show
   convincingly)
 - `brand/locations.md`: build places and luxury reveal places
+- `brand/growth-playbook.md`: what the breakouts do (opening in action, a
+  reason, a change every 1–2 s, two formats). Every idea must fit it.
 - `ideas/log.md`: every idea ever, with **tags**. Never repeat an idea or a
   close variant. Use the tags for the variety rules in section 3.
 - The newest `ideas/shortlist-*.md`
@@ -62,10 +64,15 @@ Read these files from the project root:
    `ideas/log.md`. Any category used 2+ times in those 6 gets at most 1 idea
    now. Any category used 0 times gets at least 1 idea now (if it's
    buildable).
-5. **Formats:** mark each idea **A** (one of 3 projects in a compilation
-   Short, about 11 s each) or **B** (single 12–18 s Short). Include at least
-   one named 3-project compilation built from A ideas of different
-   categories.
+5. **Formats:** mark each idea **Q** (Quick build: one object, 15–22 s,
+   8–12 beats) or **BIG** (Big transformation: a whole room, yard, terrace
+   or wreck, 45–60 s, 20–30 beats, with a reason). **At least 3 of the 8
+   ideas are BIG**: every breakout above 5M views in the 2026-11-15
+   research was one. Compilations (old format A) only when the user asks.
+6. **Every idea names its opening action and its reason** (growth rules
+   R1–R3): what Luna is doing to the junk in frame 0, and who or what the
+   piece is for. An idea whose first step is dull, or that has no reason,
+   is reworked or dropped.
 
 ## 3. Research
 
@@ -113,8 +120,8 @@ For each idea:
    new shape that only hides the object, change the **object**, never lower
    the result. (Rejected example: a long water jug → a round igloo. The
    igloo got an exercise ball instead.)
-4. **Buildable and AI-friendly.** Real steps, one action per clip, 3–4 clips
-   per project for Format A, 5–7 for Format B. Avoid tiny precise hand work,
+4. **Buildable and AI-friendly.** Real steps, one action per clip, 7–9 clips
+   for a Quick build, 12–16 for a Big transformation. Avoid tiny precise hand work,
    text on objects, crowds and complex liquids.
 5. **Original:** change at least the object or the result compared with any
    reference.
@@ -124,7 +131,9 @@ score best.
 
 **Score each idea from 1 to 5 on:**
 - **Proof:** reference or vidIQ evidence
-- **Hook:** whether the first frame stops the scroll
+- **Hook:** how striking the opening action is (Luna doing something
+  surprising to the junk in frame 0), and how clear the reason is without
+  words. Never score a flash of the finished piece as the hook
 - **Ease:** how convincingly it can be generated
 - **Payoff:** how satisfying the ending is
 - **Luxury:** how wanted the result is
@@ -135,15 +144,18 @@ Rank by the total.
 
 Write `ideas/shortlist-YYYY-MM-DD.md` with these parts:
 1. **What's working:** reference projects and vidIQ patterns, with numbers.
-2. **Ideas table:** #, category, format A/B, dream result, object → method
-   (shape line), build place → reveal place, payoff, title, score.
+2. **Ideas table:** #, category, format Q/BIG, dream result, object → method
+   (shape line), opening action, reason, build place → reveal place, payoff,
+   title, score. Give each idea two titles: one "I Turned X Into Y" and one
+   two-sentence story title ("The Weeds Moved Out. The Lounge Chairs Moved
+   In.").
 3. **A variety check line,** e.g. "7 categories · 6 payoffs · 5 reveal places · pet-wildlife 1".
 4. **Compilations:** named 3-project groups from the A ideas.
 5. **Recommended next:** 1 compilation or 1–2 singles, with reasons.
 
 Append every idea to `ideas/log.md` with status `proposed` and a tag line in
 the idea text:
-`[cat:<key> · <build>→<reveal> · payoff:<type> · fmt:<A|B>]`
+`[cat:<key> · <build>→<reveal> · payoff:<type> · fmt:<Q|BIG>]`
 Update the pointer at the top of `ideas/ideas.md`.
 
 ## 6. Report

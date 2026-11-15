@@ -207,14 +207,21 @@ For every clip in Part 2 of `plan.md`:
    Then check the audio for music or voices. If you can't check it, say
    so.
 4. **Write down the usable window** for each clip: the clean seconds, the
-   timestamp of any glitch, and the best 1.5–3 s. Update that segment's
-   `start`/`end` in `edit.json` so it cuts before the glitch.
+   timestamp of any glitch, and the best **1–2 s beats** (often 2–3 separate
+   beats per clip: use several short trims, never one long one). Update the
+   segments' `start`/`end` in `edit.json` so they cut before the glitch.
+   The first segment is trimmed into the action so frame 0 is already
+   moving. No segment over 2.5 s except a time-lapse clip or the ending
+   (3.5 s at most). See `brand/growth-playbook.md`.
 5. **If a clip has no usable 1.5 s,** allow one retry with tightened
    wording: stronger STABILITY lines, a simpler action. If it fails again,
    report it to the user and suggest splitting the action or changing the
    frames.
 
 ## 5. Finish
+
+After `tools/assemble.py` writes `output/final.mp4`, run `/luna-score` on the
+project and fix what it flags before telling the user the video is ready.
 
 1. **Update the status line in `plan.md`,** for example
    `images: 8/8 · clips: 7/7 · edited: no`.

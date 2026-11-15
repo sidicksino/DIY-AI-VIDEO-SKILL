@@ -105,8 +105,19 @@ Follow `/luna-plan` sections 4–7 (read
 - **`edit.json`:** the same segment order and roughly the same timing as
   the reference (their shot lengths are your first trims), plus the loop.
   No hook text or any on-screen text, and no music: Flow's own sound stays.
+  **Open the way the reference opens.** Never add a flash of the finished
+  piece in front (research 2026-11-15: 0 of 27 breakouts open on the
+  result). The first segment's label starts with `OPEN:` and is trimmed so
+  frame 0 is already moving.
+- **Growth rules** (`brand/growth-playbook.md`): keep the reference's pace
+  if it is faster than ours; otherwise no shot over 2.5 s (time-lapse
+  excepted), a use or reaction beat near the end, and an ending of at most
+  3.5 s. If the reference has a reason beat (a problem, a person or pet in
+  need), keep it with our own characters.
 - **`post.md`:** our own title, description, tags, and Instagram and TikTok
   captions. Never their title.
+  Titles, tags and hashtags follow `brand/keywords.md` (researched title
+  patterns, per-category tags, platform hashtag sets).
 - **`ideas/log.md`:** add a row with status `picked` and these tags:
   `[cat:<key> · <build>→<reveal> · payoff:<type> · fmt:<A|B> · end:<style> · source:same-idea/<file>]`
 
