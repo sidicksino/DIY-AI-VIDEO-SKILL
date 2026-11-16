@@ -126,10 +126,10 @@ def pace_report(edit, lengths):
                 warn.append(f"ending: segment {i} is {n:.1f}s, keep it to 3.5s (R6)")
         elif n > 2.6 and "time-lapse" not in label and "timelapse" not in label:
             warn.append(f"pace: segment {i} is {n:.1f}s, split it into 1-2s beats (R4)")
-    if not (15 <= total <= 22 or 45 <= total <= 62):
-        warn.append(f"length: {total:.1f}s is outside Quick build 15-22s and "
+    if not (11 <= total <= 25.5 or 45 <= total <= 62):
+        warn.append(f"length: {total:.1f}s is outside Quick build 11-25s and "
                     f"Big transformation 45-60s (R7)")
-    need = 8 if total <= 30 else 20
+    need = (7 if total < 15 else 8) if total <= 30 else 20
     if len(segs) < need:
         warn.append(f"beats: {len(segs)} segments, aim for {need}+ at this length (R5)")
     print(f"\n  pace: {len(segs)} beats, {total:.1f}s, {total / len(segs):.2f}s per beat")

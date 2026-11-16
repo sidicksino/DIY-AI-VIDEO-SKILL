@@ -60,8 +60,8 @@ Before writing prompts, write the concept in these lines, in this order:
 - **Placement:** exactly where the finished piece lives in its reveal place,
   and why a real designer would put it there (see section 2b).
 - **Ending:** which ending style closes the video (see section 2c).
-- **Format:** Quick build (15–22 s) or Big transformation (45–60 s). See
-  section 3.
+- **Format:** Quick build (11–25 s), the default. Big transformation
+  (45–60 s) only when the user asks. See section 3.
 - **Opening action:** what Luna is already doing in frame 0, and the first
   tool-on-junk contact that has started by 1.0 s. It must be step one of the
   build, and it must be striking. If step one is dull, change the build.
@@ -190,8 +190,8 @@ Real DIY Shorts aren't one fixed wide shot. Every plan includes:
 
 | Format | Final length | Beats | Clips | Use for |
 |---|---|---|---|---|
-| **Quick build** | 15–22 s | 8–12 | 7–9 | one object |
-| **Big transformation** | 45–60 s | 20–30 | 12–16 | a whole room, yard, terrace or wreck, with a reason |
+| **Quick build (default)** | 11–25 s | 8–14 | 6–9 | one object or one corner, every step shown fast |
+| **Big transformation** (only when the user asks) | 45–60 s | 20–30 | 12–16 | a whole room, yard, terrace or wreck, with a reason |
 
 A **beat** is one visible change, 1–2 s long. One 8 s Veo clip usually
 gives 1–3 beats (use 2–3 short trims from a clip, never one long trim).
@@ -200,7 +200,7 @@ gives 1–3 beats (use 2–3 short trims from a clip, never one long trim).
 |---|---|---|
 | **Open** | 0–1.5 s | **Luna already in action** on the junk or the empty place: movement within 0.5 s, first tool-on-junk contact by 1.0 s. For a reason-led video, the problem beat goes here instead. **Never the finished piece** |
 | **Reason** | 1.5–3 s inside the first 4 s | Who or what it is for, shown without words. May be the Open itself |
-| **Build** | the middle | Quick: 6–9 beats. Big: 16–24 beats. **One physical action each**, a visible change every 1–2 s, inserts on the most satisfying moments |
+| **Build** | the middle | Quick: 5–11 beats of 1–1.5 s, every real step shown. Big: 16–24 beats. **One physical action each**, a visible change every 1–2 s, inserts on the most satisfying moments |
 | **Reveal** | ~1.5 s | The finished piece in place. Its first appearance in the video |
 | **Use** | 1.5–2 s | Someone uses it or reacts. This closes the reason |
 | **Ending** | at most 3.5 s | The chosen ending style (2c) in the checked placement (2b) |
@@ -350,7 +350,7 @@ Go through the plan and confirm every item:
 - [ ] Camera (2d): 2–3 inserts per project with In-* frames; the ending clip has a camera move; build steps on a tripod; the ending travels smoothly through the whole place; no handheld shake anywhere
 - [ ] Sound: no music in edit.json; Flow's own sound is kept as generated
 - [ ] No `hook` key and no on-screen text in edit.json
-- [ ] Growth rules: format chosen (Quick 15–22 s / Big 45–60 s); the first segment is `OPEN:` with action from frame 0; the finished piece first appears in the last third; a reason beat in the first 4 s; a use beat near the end; no segment over 2.5 s (time-lapse and ending excepted); ending at most 3.5 s; beat count fits the format
+- [ ] Growth rules: format chosen (Quick 11–25 s by default / Big 45–60 s only if asked); the first segment is `OPEN:` with action from frame 0; the finished piece first appears in the last third; a reason beat in the first 4 s; a use beat near the end; no segment over 2.5 s (time-lapse and ending excepted); ending at most 3.5 s; beat count fits the format
 - [ ] Every clip's AUDIO line names one clear sound, and its action starts in the first second
 - [ ] Placement passes 2b: it has a job, a backdrop and dressing, and is framed as the subject
 - [ ] The ending style differs from the previous video's; Luna isn't in the last frame two videos running

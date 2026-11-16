@@ -12,7 +12,7 @@ Written to [the realism playbook](../../brand/realism-playbook.md).
 - **Finished piece:** <what, size, materials, finish>
 - **The junk's job:** <how its shape survives and what it does>
 - **Payoff:** <animal + exactly what it does>
-- **Format:** <Quick build 15–22 s | Big transformation 45–60 s>
+- **Format:** <Quick build 11–25 s (default) | Big transformation 45–60 s (only if asked)>
 - **Opening action:** <what Luna is doing in frame 0; first tool-on-junk contact by 1.0 s>
 - **Reason:** <who or what it is for, shown without words; how the ending closes it>
 

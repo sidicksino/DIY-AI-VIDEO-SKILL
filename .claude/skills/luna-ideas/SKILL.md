@@ -64,11 +64,11 @@ Read these files from the project root:
    `ideas/log.md`. Any category used 2+ times in those 6 gets at most 1 idea
    now. Any category used 0 times gets at least 1 idea now (if it's
    buildable).
-5. **Formats:** mark each idea **Q** (Quick build: one object, 15–22 s,
-   8–12 beats) or **BIG** (Big transformation: a whole room, yard, terrace
-   or wreck, 45–60 s, 20–30 beats, with a reason). **At least 3 of the 8
-   ideas are BIG**: every breakout above 5M views in the 2026-11-15
-   research was one. Compilations (old format A) only when the user asks.
+5. **Format:** every idea is a **Q** (Quick build: one object or one
+   corner, 11–25 s, 8–14 beats, every step shown fast). This is the default
+   (user, 2026-11-15). Add **BIG** ideas (Big transformation: a whole room,
+   yard, terrace or wreck, 45–60 s, with a reason) only when the user asks
+   for them. Compilations only when the user asks.
 6. **Every idea names its opening action and its reason** (growth rules
    R1–R3): what Luna is doing to the junk in frame 0, and who or what the
    piece is for. An idea whose first step is dull, or that has no reason,
@@ -121,7 +121,7 @@ For each idea:
    the result. (Rejected example: a long water jug → a round igloo. The
    igloo got an exercise ball instead.)
 4. **Buildable and AI-friendly.** Real steps, one action per clip, 7–9 clips
-   for a Quick build, 12–16 for a Big transformation. Avoid tiny precise hand work,
+   for a Quick build (6–9 is usual), 12–16 for a Big transformation. Avoid tiny precise hand work,
    text on objects, crowds and complex liquids.
 5. **Original:** change at least the object or the result compared with any
    reference.

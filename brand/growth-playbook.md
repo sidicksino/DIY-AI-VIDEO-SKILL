@@ -125,7 +125,7 @@ Two short sentences: the problem, then the answer. No hashtags in the title.
 | 2 | Pace | 2.3–3.7 s per shot, some 6–9 s | a visible change every 1–2 s |
 | 3 | Reason | usually none (only the early pet videos) | a 2–3 s set-up, closed at the end |
 | 4 | Ending | 6–7 s camera travel, often nobody in it | 2–3 s, someone using or reacting |
-| 5 | Scale | one object, 11–33 s | the giants are whole spaces, 45–90 s |
+| 5 | Scale | one object, 11–33 s | the giants are whole spaces, 45–90 s; many 1–3M hits are 14–27 s (we stay short for now) |
 | 6 | Steps shown | 4–6 | 8–12 in a quick build, 20–30 in a big one |
 | 7 | Titles | "I Turned X Into Y" + hashtags in the title | two-sentence story titles, no hashtags |
 
@@ -151,19 +151,27 @@ is closed at the end.
 is a fixed-camera time-lapse in which something new appears every second.
 Use 2–3 short trims from one clip instead of one long trim.
 
-**R5. Show more steps.** Quick build: 8–12 beats. Big transformation:
-20–30 beats.
+**R5. Show every step, fast.** Quick build: 8–14 beats, one visible change
+every 1–1.5 s (at least 7 for an 11–14 s video). Big transformation: 20–30
+beats.
 
 **R6. End on use, keep it short.** The last 3–4 s: the finished piece in
 its place, and someone using it or reacting (Luna, a guest, a child, a
 pet). The smooth camera travel stays, but 3.5 s at most.
 
-**R7. Two formats.**
+**R7. Quick build is the default (user, 2026-11-15).**
 
-| Format | Length | What | How often |
+| Format | Length | What | When |
 |---|---|---|---|
-| **Quick build** | 15–22 s | one object, 8–12 beats | daily |
-| **Big transformation** | 45–60 s | a whole room, yard, terrace or wreck, with a reason, 20–30 beats | 2 a week |
+| **Quick build** | **11–25 s** | one object or one corner, every step shown fast, 8–14 beats | **every video for now** |
+| **Big transformation** | 45–60 s | a whole room, yard, terrace or wreck, with a reason, 20–30 beats | only when the user asks |
+
+Short videos break out too: "From a Messy Floor to a Stunning Pink Sakura
+Floor" 2.4M at 20 s, "Flooded Mud House to Beautiful Bedroom" 3.2M at
+17 s, "Soft luxury" 2.0M at 14 s, the tyre swing lounger 1.16M at 15 s,
+the forest-mural bedroom 1.2M at 15 s, the tyre coffee table 1.2M at 27 s.
+The 5M+ giants are longer, so Big transformations stay an option for
+later.
 
 **R8. Sound on every beat.** Each clip prompt names one clear, loud sound
 for its action. No music, no voice, no text.

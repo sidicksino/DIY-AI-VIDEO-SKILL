@@ -25,7 +25,7 @@ It prints the measured score out of 100 and writes
 
 | Measured check | Points | Passes when |
 |---|---|---|
-| Length | 10 | 15–22 s (Quick build) or 45–60 s (Big transformation) |
+| Length | 10 | 11–25 s (Quick build, the default) or 45–60 s (Big transformation) |
 | Opening moves | 20 | clear movement between 0 and 0.5 s |
 | Opening is not the result | 15 | the first segment is not the finished piece |
 | Pace | 20 | average shot 2.0 s or less, none over 2.5 s |
@@ -53,7 +53,7 @@ project's `plan.md`. Answer each with yes or no and one line of evidence:
 4. **Result held back (R1).** Does the finished piece first appear in the
    last third?
 5. **Use beat (R6).** Does someone use or react to the piece near the end?
-6. **Enough steps (R5).** 8–12 beats for a Quick build, 20–30 for a Big
+6. **Enough steps (R5).** 8–14 beats for a Quick build (7 for 11–14 s), 20–30 for a Big
    transformation?
 7. **Looks real.** Any frame in the sheets that looks AI-made (warped
    hands, morphing objects, text glitches)? Use

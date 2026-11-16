@@ -109,10 +109,10 @@ def main():
         checks.append((points, most, name, detail, fix if points < most else None))
 
     # R7 length
-    quick, big = 15 <= total <= 22, 45 <= total <= 62
-    add(10 if quick or big else (5 if 12 <= total <= 30 or 40 <= total <= 70 else 0), 10,
+    quick, big = 11 <= total <= 25.5, 45 <= total <= 62
+    add(10 if quick or big else (5 if 9 <= total <= 32 or 40 <= total <= 70 else 0), 10,
         "Length", f"{total:.1f}s ({'Quick build' if quick else 'Big transformation' if big else 'outside both formats'})",
-        "aim for 15-22s (Quick build) or 45-60s (Big transformation)")
+        "aim for 11-25s (Quick build) or 45-60s (Big transformation)")
 
     # R1 movement in the first 0.5 s
     f0, f05, f1 = frame(video, 0.0), frame(video, 0.5), frame(video, 1.0)
