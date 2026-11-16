@@ -157,6 +157,27 @@ For every other image in Part 1 of `plan.md`:
      gloves vanish in the limewash clip. That gets fixed before the clip.
    - **Fix every mismatch** by regenerating the frame from the hero with
      the corrected wording. Rerun the review until it's clean.
+8b. **Logic check: required, before the user sees any frame.** The user
+   should never be the one who finds a logic error (020, 2026-11-16: a
+   double circle in the mould, cement falling into an open centre, a mould
+   25% longer than the finished piece, all approved by mistake on the small
+   contact sheet). `review.py frames` writes `frames/_review/checks.md`:
+   - **Read every `zoom_<frame>.jpg` at full size** and answer every fact in
+     checks.md YES or NO. Write the answers into checks.md. Never answer from
+     the contact sheet or a small thumbnail.
+   - **Read every `size_*.jpg`:** the piece's left and right edges and its
+     band or wall thickness must sit on the same grid lines (within about
+     half a grid cell) in both pictures. A mould must be as long as the
+     finished piece and its channel as wide as the finished band.
+   - **Clip pairs scored under 6** ("start and end look the same") need a new
+     start frame: the clip would have nothing to show.
+   - Any NO: regenerate the frame from its anchor with corrected wording
+     (or, when the image model keeps failing, change what the frame shows,
+     e.g. the moment just before the pour instead of the pour itself), rerun
+     review.py, and answer again. Only an all-YES checks.md goes to
+     checkpoint 2, and the report to the user says what the check fixed.
+   If a frame has no Check facts, write them into plan.md first (luna-plan
+   section 4).
 9. **CHECKPOINT 2.** Make a contact sheet: all frames side by side, in plan
    order, labelled, saved as `frames/_contact.jpg`. Use Pillow from the
    project `.venv`. Show it to the user and ask them to approve the full
@@ -213,6 +234,10 @@ For every clip in Part 2 of `plan.md`:
    The first segment is trimmed into the action so frame 0 is already
    moving. No segment over 2.5 s except a time-lapse clip or the ending
    (3.5 s at most). See `brand/growth-playbook.md`.
+   **Steps projects** (`"format": "steps"` in edit.json, from `/luna-steps`):
+   check the clip against its prompt's timeline at 2 s, 5 s and 8 s. If it
+   is clean, keep the **whole clip**; cut only a glitch, a jump or dead
+   seconds, and set `speed` 1.25–1.5 on slow build clips.
 5. **If a clip has no usable 1.5 s,** allow one retry with tightened
    wording: stronger STABILITY lines, a simpler action. If it fails again,
    report it to the user and suggest splitting the action or changing the

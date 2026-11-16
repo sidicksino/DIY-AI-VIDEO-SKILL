@@ -109,10 +109,16 @@ def main():
         checks.append((points, most, name, detail, fix if points < most else None))
 
     # R7 length
-    quick, big = 11 <= total <= 25.5, 45 <= total <= 62
-    add(10 if quick or big else (5 if 9 <= total <= 32 or 40 <= total <= 70 else 0), 10,
-        "Length", f"{total:.1f}s ({'Quick build' if quick else 'Big transformation' if big else 'outside both formats'})",
-        "aim for 11-25s (Quick build) or 45-60s (Big transformation)")
+    steps = edit.get("format") == "steps"
+    if steps:
+        ok = 18 <= total <= 36
+        add(10 if ok else (5 if 14 <= total <= 42 else 0), 10, "Length",
+            f"{total:.1f}s (steps video, 18-36s)", "aim for 18-36s: speed up slow clips or trim dead seconds")
+    else:
+        quick, big = 11 <= total <= 25.5, 45 <= total <= 62
+        add(10 if quick or big else (5 if 9 <= total <= 32 or 40 <= total <= 70 else 0), 10,
+            "Length", f"{total:.1f}s ({'Quick build' if quick else 'Big transformation' if big else 'outside both formats'})",
+            "aim for 11-25s (Quick build) or 45-60s (Big transformation)")
 
     # R1 movement in the first 0.5 s
     f0, f05, f1 = frame(video, 0.0), frame(video, 0.5), frame(video, 1.0)
@@ -136,21 +142,38 @@ def main():
 
     # R4 pace
     body = lens[:-1] if len(lens) > 1 else lens
-    long = [(round(cuts[i][0], 1), round(n, 1)) for i, n in enumerate(body) if n > 2.6]
     avg = total / len(cuts)
-    pace_pts = 20 if not long and avg <= 2.0 else (14 if len(long) <= 1 and avg <= 2.6 else (7 if avg <= 3.2 else 0))
-    add(pace_pts, 20, "Pace", f"{len(cuts)} shots, {avg:.2f}s average, shots over 2.5s at {long or 'none'}",
-        "split long shots into 1-2s beats (a fixed-camera time-lapse with a change every second is fine: check shots.jpg)")
+    if steps:
+        # whole 8 s clips: judge movement inside the shots, not shot length
+        long = [(round(cuts[i][0], 1), round(n, 1)) for i, n in enumerate(body) if n > 6.6]
+        still = []
+        for t in np.arange(0.5, total - 1.0, 1.0):
+            if diff(frame(video, t), frame(video, t + 1.0)) < 2.0:
+                still.append(round(float(t), 1))
+        pace_pts = 20 if not long and len(still) <= 1 else (12 if len(long) <= 1 and len(still) <= 3 else 4)
+        add(pace_pts, 20, "Pace (steps)",
+            f"{len(cuts)} shots, {avg:.2f}s average, over 6.5s at {long or 'none'}, still seconds at {still or 'none'}",
+            "speed up or trim the still seconds; keep every shot at 6.5s or less")
+    else:
+        long = [(round(cuts[i][0], 1), round(n, 1)) for i, n in enumerate(body) if n > 2.6]
+        pace_pts = 20 if not long and avg <= 2.0 else (14 if len(long) <= 1 and avg <= 2.6 else (7 if avg <= 3.2 else 0))
+        add(pace_pts, 20, "Pace", f"{len(cuts)} shots, {avg:.2f}s average, shots over 2.5s at {long or 'none'}",
+            "split long shots into 1-2s beats (a fixed-camera time-lapse with a change every second is fine: check shots.jpg)")
 
     # R4 first 3 seconds
     early_cuts = sum(1 for a, _ in cuts if a < 3.0)
-    add(5 if early_cuts >= 2 else 0, 5, "First 3 seconds", f"{early_cuts} shot(s) start in the first 3s",
-        "add a second beat inside the first 3s")
+    if steps:
+        add(5 if lens[0] <= 6.6 else 0, 5, "First shot", f"first shot {lens[0]:.1f}s (steps: 6.5s or less)",
+            "speed up or trim the first clip")
+    else:
+        add(5 if early_cuts >= 2 else 0, 5, "First 3 seconds", f"{early_cuts} shot(s) start in the first 3s",
+            "add a second beat inside the first 3s")
 
     # R6 ending length
     end_len = lens[-1]
-    add(10 if end_len <= 3.6 else (5 if end_len <= 5 else 0), 10, "Ending length", f"last shot {end_len:.1f}s",
-        "shorten the last shot to 3.5s")
+    end_max = 6.6 if steps else 3.6
+    add(10 if end_len <= end_max else (5 if end_len <= end_max + 1.5 else 0), 10, "Ending length",
+        f"last shot {end_len:.1f}s", f"shorten the last shot to {end_max - 0.1:.1f}s")
 
     # R8 sound
     levels = loudness_per_second(video, total)

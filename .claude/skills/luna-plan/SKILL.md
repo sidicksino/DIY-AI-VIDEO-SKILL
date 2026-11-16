@@ -236,6 +236,19 @@ Write the image prompts in this order:
    become the filenames the generate step saves and uploads.
 
 Each image needs:
+- **Check / Focus / Same size as lines** (required, written right under the
+  Source line; `tools/review.py` reads them and builds the logic check):
+  ```
+  **Check:** <3–6 facts that must be true in THIS frame, joined with " · ">
+  **Focus:** x0, y0, x1, y1   (fractions of the frame: the area that proves the facts)
+  **Same size as:** <the anchor this frame's piece must match in size and spot>
+  ```
+  Write the facts from the story logic, not the look: where the material
+  goes and where it must NOT go ("the stream lands in the channel, never in
+  the open centre"), what is open, empty or full, how many walls, rings or
+  parts there are ("exactly one inner wall per loop, nothing else inside"),
+  which tool is in her hands and which is not, and what must already have
+  happened or must not have happened yet. Anchors get Check and Focus too.
 - **Model:** Nano Banana **Pro** for anchors (heroes / build anchors), Nano Banana 2
   for stage edits; 9:16, x1 (see playbook §6 Quality)
 - **References:** `brand/luna-sheet.png` for Luna. Add `brand/luna-garden.png`
@@ -346,6 +359,7 @@ Go through the plan and confirm every item:
 - [ ] Frames: the first frame is the empty place + junk in hand; no end frame holds the next step's tool; inserts sit inside their own step; the backdrop behind/inside the piece is the same in every frame
 - [ ] Object sizes, colours and shapes are written the same way in every
       prompt
+- [ ] Every frame has **Check:** facts (logic: where material goes, what is empty or full, counts, tools), a **Focus:** box, and **Same size as:** its anchor
 - [ ] The junk is still recognisable and has a job
 - [ ] Camera (2d): 2–3 inserts per project with In-* frames; the ending clip has a camera move; build steps on a tripod; the ending travels smoothly through the whole place; no handheld shake anywhere
 - [ ] Sound: no music in edit.json; Flow's own sound is kept as generated

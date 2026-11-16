@@ -1,0 +1,17 @@
+{
+  "output": "output/final.mp4",
+  "format": "steps",
+  "clip_db": 0,
+  "grain": 3,
+  "logo": "brand/logo.png",
+  "logo_y": 0.1,
+  "loop": 0.4,
+  "segments": [
+    { "clip": "clips/C1.mp4", "start": 0.0, "end": 7.9, "speed": 1.5, "label": "OPEN: Luna bends old cardboard into a figure-eight (action from frame 0)" },
+    { "clip": "clips/C2.mp4", "start": 0.0, "end": 7.9, "speed": 1.5, "label": "pour the concrete" },
+    { "clip": "clips/C3.mp4", "start": 0.0, "end": 7.9, "speed": 1.5, "label": "peel the cardboard off" },
+    { "clip": "clips/C4.mp4", "start": 0.0, "end": 7.9, "speed": 1.5, "label": "spray emerald" },
+    { "clip": "clips/C5.mp4", "start": 0.0, "end": 7.9, "speed": 1.5, "label": "brush the gold line" },
+    { "clip": "clips/C6.mp4", "start": 0.0, "end": 6.5, "label": "reveal + use: vase on the glass, camera glides and rises" }
+  ]
+}

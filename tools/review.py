@@ -12,6 +12,13 @@ frames: reads the image order from plan.md (### <name> headings in Part 1) and
                   to the piece, Luna's face and her hands, for checking
                   shape, size, colour and identity side by side.
   It prints the background drift per frame; anything flagged needs a close look.
+  - checks.md     the logic check: each frame's **Check:** facts from plan.md (what
+                  must and must not be in it), to answer YES/NO on zoom_<frame>.jpg
+                  (a full-resolution crop of its **Focus:** box) before the user sees it
+  - size_*.jpg    clip start | end (and **Same size as:** pairs) side by side with a
+                  10% grid, to compare the piece's size and spot
+  It also prints, per clip pair, how much changes inside the Focus box; under 6 means
+  start and end are nearly the same picture (the clip would have nothing to show).
 
 clip: decodes every frame and writes into clips/_review/<clip>/:
   - grid.jpg      a frame every 0.25 s
@@ -125,6 +132,100 @@ def review_frames(project):
             y += t.height + 10
         page.save(out / f"pairs_{a}__{b}.jpg", quality=90)
     print(f"Wrote {out}/drift.jpg and {len(pairs)} clip pair sheets.")
+
+    # 3. logic checks: per-frame Check facts + Focus zooms, clip-pair change, size grids
+    logic_checks(project, names, pairs, plan, out)
+
+
+def frame_meta(plan, name):
+    """The **Check:** facts, **Focus:** box and **Same size as:** frame written under a frame heading."""
+    part = plan.split(f"### {name} —", 1)
+    if len(part) < 2:
+        return [], None, None
+    block = part[1].split("\n### ", 1)[0].split("\n## ", 1)[0]
+    facts = []
+    m = re.search(r"^\*\*Check:\*\*(.+)$", block, re.M)
+    if m:
+        facts = [f.strip(" .") for f in re.split(r"\s+·\s+|;", m.group(1)) if f.strip(" .")]
+    box = None
+    m = re.search(r"^\*\*Focus:\*\*\s*([0-9.]+)\s*,\s*([0-9.]+)\s*,\s*([0-9.]+)\s*,\s*([0-9.]+)", block, re.M)
+    if m:
+        box = tuple(float(v) for v in m.groups())
+    m = re.search(r"^\*\*Same size as:\*\*\s*([A-Za-z0-9-]+)", block, re.M)
+    return facts, box, (m.group(1) if m else None)
+
+
+def grid(im, step=0.1):
+    """A copy with a labelled 10% grid, so piece edges can be compared between frames."""
+    im = im.copy()
+    d = ImageDraw.Draw(im)
+    w, h = im.size
+    for k in range(1, int(1 / step)):
+        x, y = int(w * k * step), int(h * k * step)
+        d.line([(x, 0), (x, h)], fill=(255, 0, 0), width=1)
+        d.line([(0, y), (w, y)], fill=(255, 0, 0), width=1)
+        d.text((x + 2, 2), f"{k * 10}", fill=(255, 0, 0))
+        d.text((2, y + 2), f"{k * 10}", fill=(255, 0, 0))
+    return im
+
+
+def side_by_side(a, b, la, lb, width=560):
+    a = a.resize((width, int(a.height * width / a.width)))
+    b = b.resize((width, int(b.height * width / b.width)))
+    page = Image.new("RGB", (width * 2 + 10, max(a.height, b.height) + 24), "white")
+    page.paste(a, (0, 24))
+    page.paste(b, (width + 10, 24))
+    d = ImageDraw.Draw(page)
+    d.text((4, 4), la, fill="black")
+    d.text((width + 14, 4), lb, fill="black")
+    return page
+
+
+def logic_checks(project, names, pairs, plan, out):
+    fdir = project / "frames"
+    for old in list(out.glob("zoom_*.jpg")) + list(out.glob("size_*.jpg")):
+        old.unlink()
+    lines = ["# Logic check (fill in before showing the user)", "",
+             "Answer every fact YES or NO by looking at the zoom image at full size.",
+             "Any NO: fix the frame (reword, regenerate from its anchor) and rerun review.py.", ""]
+    missing = []
+    for n in names:
+        facts, box, same = frame_meta(plan, n)
+        im = Image.open(fdir / f"{n}.png").convert("RGB")
+        if box:
+            z = crop(im, box)
+            scale = 900 / max(z.size)
+            z.resize((int(z.width * scale), int(z.height * scale))).save(out / f"zoom_{n}.jpg", quality=92)
+        lines.append(f"## {n}")
+        lines.append(f"Zoom: `{out / ('zoom_' + n + '.jpg')}`" if box else "Zoom: (no **Focus:** box in plan.md: look at the full frame)")
+        if not facts:
+            missing.append(n)
+            lines.append("- [ ] (no **Check:** facts in plan.md: write them first)")
+        for f in facts:
+            lines.append(f"- [ ] {f}")
+        if same and (fdir / f"{same}.png").exists():
+            other = Image.open(fdir / f"{same}.png").convert("RGB")
+            side_by_side(grid(other), grid(im), same, n).save(out / f"size_{same}__{n}.jpg", quality=88)
+            lines.append(f"- [ ] Same spot and size as {same}: piece edges on the same grid lines (`size_{same}__{n}.jpg`)")
+        lines.append("")
+
+    print("\nClip pairs, change inside the Focus box (start vs end; under 6 = almost nothing happens):")
+    lines.append("## Clip pairs")
+    for a, b in pairs:
+        _, box, _ = frame_meta(plan, a)
+        ia = Image.open(fdir / f"{a}.png").convert("RGB")
+        ib = Image.open(fdir / f"{b}.png").convert("RGB").resize(ia.size)
+        region = box or (0.0, 0.35, 1.0, 1.0)
+        change = float(np.abs(gray(crop(ia, region)) - gray(crop(ib, region))).mean())
+        flag = "  <-- start and end look the same" if change < 6 else ""
+        print(f"  {a:12s} -> {b:12s} {change:5.1f}{flag}")
+        side_by_side(grid(ia), grid(ib), a, b).save(out / f"size_{a}__{b}.jpg", quality=88)
+        lines.append(f"- [ ] {a} -> {b}: change {change:.1f}{' (FLAG: almost no change)' if flag else ''}; "
+                     f"piece the same size and spot on the grid (`size_{a}__{b}.jpg`); only this clip's action differs")
+    (out / "checks.md").write_text("\n".join(lines) + "\n")
+    if missing:
+        print("  no **Check:** facts for: " + ", ".join(missing))
+    print(f"Wrote {out}/checks.md, zoom_*.jpg and size_*.jpg")
 
 
 def read_frames(clip, fps_out=None):

@@ -173,6 +173,11 @@ the forest-mural bedroom 1.2M at 15 s, the tyre coffee table 1.2M at 27 s.
 The 5M+ giants are longer, so Big transformations stay an option for
 later.
 
+**Steps videos** (`/luna-steps`, from a numbered step image): 4–6 whole 8 s
+clips, one action each written second by second, build clips played at
+1.25–1.5× → 18–36 s. Whole clips are kept unless a part is bad. This is a
+test format: compare its numbers with the Quick builds.
+
 **R8. Sound on every beat.** Each clip prompt names one clear, loud sound
 for its action. No music, no voice, no text.
 

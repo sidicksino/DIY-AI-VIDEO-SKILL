@@ -16,6 +16,12 @@ Optional in edit.json:
     "hook": {...}   legacy only; the channel never uses on-screen text (2026-11-14)
         Big rounded caption in the first seconds (most people scroll on mute;
         the words are what stop them). Fades in at 0.1 s, out at "end".
+    "format": "steps"
+        A /luna-steps video: whole 8 s clips are the norm, so the pace report
+        allows segments up to 6.5 s and a total of 18-36 s.
+    per segment "speed": 1.5
+        Plays that segment faster (0.5-2.0), sound included. start/end are in
+        the clip's own time; the segment lasts (end - start) / speed.
     "loop": 0.4
         Dissolves the last 0.4 s into the opening frame, so the Short ends on
         its own first frame and restarts seamlessly (replays count heavily).
@@ -91,6 +97,15 @@ def cut(seg, project, dest, clip_db):
                  f"(clip is {dur:.2f}s)")
     length = end - start
     volume = "0" if seg.get("mute") else f"{clip_db}dB"
+    speed = float(seg.get("speed", 1.0))
+    if not 0.5 <= speed <= 2.0:
+        sys.exit(f"{seg['clip']}: speed {speed} must be between 0.5 and 2.0")
+    vf, af = fit_filter(src_h), ""
+    if speed != 1.0:
+        # setpts before fps= so the frame rate stays 24 after the speed change
+        vf = f"setpts=PTS/{speed}," + vf
+        af = f",atempo={speed}"
+    out_len = length / speed
 
     # -ss/-t before -i: they limit what is read from the input
     cmd = ["ffmpeg", "-y", "-ss", f"{start:.3f}", "-t", f"{length:.3f}", "-i", src]
@@ -98,12 +113,12 @@ def cut(seg, project, dest, clip_db):
         cmd += ["-f", "lavfi", "-t", f"{length:.3f}", "-i", "anullsrc=r=48000:cl=stereo"]
     cmd += [
         "-map", "0:v:0", "-map", "0:a:0" if has_audio else "1:a:0",
-        "-vf", fit_filter(src_h),
-        "-af", f"aresample=48000,aformat=channel_layouts=stereo,volume={volume}",
-        *MID, "-c:a", "aac", "-b:a", "256k", "-t", f"{length:.3f}", dest,
+        "-vf", vf,
+        "-af", f"aresample=48000,aformat=channel_layouts=stereo,volume={volume}{af}",
+        *MID, "-c:a", "aac", "-b:a", "256k", "-t", f"{out_len:.3f}", dest,
     ]
     run(cmd)
-    return length
+    return out_len
 
 
 HOOK_FONT = "/System/Library/Fonts/Supplemental/Arial Rounded Bold.ttf"
@@ -119,17 +134,25 @@ def pace_report(edit, lengths):
         warn.append("opening: the first segment looks like the finished piece. "
                     "Open on Luna in action (R1)")
     last = len(segs) - 1
+    steps = edit.get("format") == "steps"
     for i, (seg, n) in enumerate(zip(segs, lengths)):
         label = (seg.get("label") or "").lower()
-        if i == last:
+        if steps:
+            if n > 6.6:
+                warn.append(f"pace: segment {i} is {n:.1f}s; a steps clip should play in "
+                            f"6.5s or less (add \"speed\": 1.25-1.5 or trim dead seconds)")
+        elif i == last:
             if n > 3.6:
                 warn.append(f"ending: segment {i} is {n:.1f}s, keep it to 3.5s (R6)")
         elif n > 2.6 and "time-lapse" not in label and "timelapse" not in label:
             warn.append(f"pace: segment {i} is {n:.1f}s, split it into 1-2s beats (R4)")
-    if not (11 <= total <= 25.5 or 45 <= total <= 62):
+    if steps:
+        if not 18 <= total <= 36:
+            warn.append(f"length: {total:.1f}s is outside the steps range 18-36s (R7)")
+    elif not (11 <= total <= 25.5 or 45 <= total <= 62):
         warn.append(f"length: {total:.1f}s is outside Quick build 11-25s and "
                     f"Big transformation 45-60s (R7)")
-    need = (7 if total < 15 else 8) if total <= 30 else 20
+    need = 4 if steps else ((7 if total < 15 else 8) if total <= 30 else 20)
     if len(segs) < need:
         warn.append(f"beats: {len(segs)} segments, aim for {need}+ at this length (R5)")
     print(f"\n  pace: {len(segs)} beats, {total:.1f}s, {total / len(segs):.2f}s per beat")
