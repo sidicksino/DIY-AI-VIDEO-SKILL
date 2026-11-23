@@ -1,0 +1,53 @@
+{
+ "output": "output/final.mp4",
+ "format": "steps",
+ "clip_db": 0,
+ "grain": 3,
+ "logo": "brand/logo.png",
+ "logo_y": 0.1,
+ "loop": 0.4,
+ "segments": [
+  {
+   "clip": "clips/C1.mp4",
+   "start": 0.7,
+   "end": 7.8,
+   "speed": 1.6,
+   "label": "OPEN: Luna cuts the bathtub with angle grinder, sparks flying (action from frame 0)"
+  },
+  {
+   "clip": "clips/C2.mp4",
+   "start": 0.0,
+   "end": 7.0,
+   "speed": 1.6,
+   "label": "Luna separates the two cut halves into chair bucket shells"
+  },
+  {
+   "clip": "clips/C3.mp4",
+   "start": 0.0,
+   "end": 6.8,
+   "speed": 1.5,
+   "label": "spray painting the shell matte sage green"
+  },
+  {
+   "clip": "clips/C4.mp4",
+   "start": 0.0,
+   "end": 6.8,
+   "speed": 1.5,
+   "label": "impact driver secures teak legs with brass brackets"
+  },
+  {
+   "clip": "clips/C5.mp4",
+   "start": 0.0,
+   "end": 6.5,
+   "speed": 1.5,
+   "label": "placing thick cream boucle cushions into the bucket seats"
+  },
+  {
+   "clip": "clips/C6.mp4",
+   "start": 0.0,
+   "end": 7.5,
+   "speed": 1.35,
+   "label": "reveal & sit on pool terrace, smooth pull-back revealing pool and loungers"
+  }
+ ]
+}
