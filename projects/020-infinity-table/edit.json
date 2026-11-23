@@ -1,17 +1,66 @@
 {
-  "output": "output/final.mp4",
-  "format": "steps",
-  "clip_db": 0,
-  "grain": 3,
-  "logo": "brand/logo.png",
-  "logo_y": 0.1,
-  "loop": 0.4,
-  "segments": [
-    { "clip": "clips/C1.mp4", "start": 0.0, "end": 7.9, "speed": 1.5, "label": "OPEN: Luna bends old cardboard into a figure-eight (action from frame 0)" },
-    { "clip": "clips/C2.mp4", "start": 0.0, "end": 7.9, "speed": 1.5, "label": "pour the concrete" },
-    { "clip": "clips/C3.mp4", "start": 0.0, "end": 7.9, "speed": 1.5, "label": "peel the cardboard off" },
-    { "clip": "clips/C4.mp4", "start": 0.0, "end": 7.9, "speed": 1.5, "label": "spray emerald" },
-    { "clip": "clips/C5.mp4", "start": 0.0, "end": 7.9, "speed": 1.5, "label": "brush the gold line" },
-    { "clip": "clips/C6.mp4", "start": 0.0, "end": 6.5, "label": "reveal + use: vase on the glass, camera glides and rises" }
-  ]
+ "output": "output/final.mp4",
+ "format": "steps",
+ "clip_db": 0,
+ "grain": 3,
+ "logo": "brand/logo.png",
+ "logo_y": 0.1,
+ "loop": 0.4,
+ "segments": [
+  {
+   "clip": "clips/C1.mp4",
+   "start": 2.5,
+   "end": 7.2,
+   "speed": 1.5,
+   "label": "OPEN: Luna presses the cardboard strip round the mould (action from frame 0); 0-2.5 s cut: a floating cardboard ring"
+  },
+  {
+   "clip": "clips/C2.mp4",
+   "start": 0.0,
+   "end": 1.0,
+   "speed": 1.5,
+   "label": "pour starts at the centre crossing (into the channel)"
+  },
+  {
+   "clip": "clips/C2.mp4",
+   "start": 5.2,
+   "end": 7.9,
+   "speed": 1.5,
+   "label": "channel full, bucket lifted; 1.0-5.2 s cut: stream drops into the round middles (retake v2)"
+  },
+  {
+   "clip": "clips/C3.mp4",
+   "start": 0.0,
+   "end": 5.2,
+   "speed": 1.5,
+   "label": "peel the cardboard off"
+  },
+  {
+   "clip": "clips/C3.mp4",
+   "start": 6.3,
+   "end": 7.9,
+   "speed": 1.25,
+   "label": "cardboard off, smooth ring; 5.2-6.3 s cut: cardboard flying"
+  },
+  {
+   "clip": "clips/C4.mp4",
+   "start": 0.0,
+   "end": 6.4,
+   "speed": 1.5,
+   "label": "spray emerald; cut at 6.4 s before the snap to full gloss"
+  },
+  {
+   "clip": "clips/C5.mp4",
+   "start": 0.0,
+   "end": 7.9,
+   "speed": 1.5,
+   "label": "brush the gold line"
+  },
+  {
+   "clip": "clips/C6.mp4",
+   "start": 2.0,
+   "end": 7.9,
+   "label": "reveal + use, camera pulls back; 1.0-1.9 s cut: split-screen glitch"
+  }
+ ]
 }

@@ -1,0 +1,46 @@
+{
+ "output": "output/final.mp4",
+ "format": "steps",
+ "clip_db": 0,
+ "grain": 3,
+ "logo": "brand/logo.png",
+ "logo_y": 0.1,
+ "loop": 0.4,
+ "segments": [
+  {
+   "clip": "clips/C1.mp4",
+   "start": 0.0,
+   "end": 7.9,
+   "speed": 1.5,
+   "label": "OPEN: Luna fits the slate pavers into the circular brass rim (action from frame 0)"
+  },
+  {
+   "clip": "clips/C2.mp4",
+   "start": 0.0,
+   "end": 6.6,
+   "speed": 1.5,
+   "label": "trowel dark charcoal mortar into all joints flush (cut at 6.6s before bucket snap)"
+  },
+  {
+   "clip": "clips/C3.mp4",
+   "start": 0.0,
+   "end": 7.0,
+   "speed": 1.5,
+   "label": "brush metallic gold leaf enamel along all mortar seams (cut at 7.0s before bucket pop)"
+  },
+  {
+   "clip": "clips/C4.mp4",
+   "start": 0.0,
+   "end": 7.9,
+   "speed": 1.4,
+   "label": "wipe and buff stone surface clean with damp sponge"
+  },
+  {
+   "clip": "clips/C5.mp4",
+   "start": 0.0,
+   "end": 6.5,
+   "speed": 1.0,
+   "label": "reveal + use in luxury living room, camera glides across gold veins and rises"
+  }
+ ]
+}

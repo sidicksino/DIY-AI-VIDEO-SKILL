@@ -25,19 +25,19 @@ No music, no voices, no on-screen text, no sudden changes, no time skips.
 **Check:** at 2 s the loose strip is bending down round the left loop · at 5 s it is pressed along the left loop · at 8 s the mould is closed and taped, empty.
 
 ### C2 — pour the concrete
-**Start:** `S2-start` · **End:** `B-mould` · save as **`clips/raw/C2.mp4`**
+**Start:** `S2-start` · **End:** `B-mould` · save as **`clips/raw/C2.mp4`** (RETAKE 2026-11-20: the first take poured into the open middles; old take kept as `clips/raw/C2.v1-centre.mp4`)
 ```
 Vertical smartphone video on a tripod, fixed framing, real-time speed, one continuous shot.
-0–1 s: Luna tips the bucket; thick wet concrete pours down into the narrow channel at the front of the left loop.
-1–4 s: she pours on round the left loop; the channel fills to the top.
-4–7 s: she moves the stream through the centre and round the right loop; it fills level.
-7–8 s: she lifts the empty bucket away; the whole channel is full, level and glossy.
-One continuous motion, no pause, no jump. The stream only lands in the channel between the walls; the loop centres stay empty. The mould keeps exactly the same shape.
-Natural motion blur, true colors, no grading, afternoon sun from camera left.
-SFX: heavy wet concrete glugging and slapping, bucket scraping. Ambient: birds.
-No music, no voices, no on-screen text, no sudden changes, no time skips.
+0–1 s: Luna rests the bucket lip on the top of the front outer wall of the left loop; concrete runs down inside that wall into the narrow gap.
+1–4 s: she slides the lip along the outer wall round the left loop; the gap fills.
+4–7 s: she keeps the lip on the outer wall round the right loop; that gap fills.
+7–8 s: she lifts the empty bucket away; the gap is full and level.
+Concrete only runs down the outer wall into the gap. The round middles stay empty bare cardboard; nothing falls into them. One continuous motion, no jump.
+Natural motion blur, true colors, afternoon sun from camera left.
+SFX: wet concrete glugging, bucket scraping. Ambient: birds.
+No music, no voices, no on-screen text, no time skips.
 ```
-**Check:** at 2 s concrete is pouring into the empty front channel of the left loop (never into the empty middle) · at 5 s the left loop is full, the stream is at the centre/right · at 8 s the whole channel is full and level, bucket lifting away, loop centres empty.
+**Check:** at 1 s and 4 s the concrete runs down the OUTER wall into the gap, never into a round middle · at 5 s the left loop is full, the stream is at the centre/right · at 8 s the whole channel is full and level, bucket lifting away, loop centres empty.
 
 ### C3 — peel the cardboard off the cured concrete
 **Start:** `S3-start` · **End:** `S3-end` · save as **`clips/raw/C3.mp4`**

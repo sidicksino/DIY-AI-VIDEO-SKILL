@@ -3,7 +3,7 @@
 **Title:** I Made a Luxury Infinity Table From Old Boxes and Concrete ✨
 **Source:** frames-images/IMG_9728.jpeg (6-step image)
 **Tags:** [cat:furniture · workbench→luxury-living · payoff:luxury-room-reveal · fmt:steps · end:use · source:frames-images/IMG_9728.jpeg]
-**Status:** frames 11/11 approved 2026-11-16 (logic check: mould size/band mismatch kept by the user's choice) · clips: 0/6 (user makes them from MANUAL.md) · edited: no
+**Status:** frames 11/11 approved · clips 6/6 in (C2 retake v2 still pours into the middles from 1.0 to 5.2 s: only 0–1.0 s and 5.2–7.9 s are used; C2–C6 are 720p) · edited: output/final.mp4, 25.9 s · score 87 (the missing 13 come from a false cut-detector reading on same-view tripod shots; all 8 segments are 6.5 s or less)
 
 Written to [the realism playbook](../../brand/realism-playbook.md), the [growth playbook](../../brand/growth-playbook.md) and `/luna-steps` (one action per 8 s clip, written second by second). Clips by hand with [MANUAL.md](MANUAL.md).
 
@@ -225,14 +225,14 @@ No music, no voices, no on-screen text, no sudden changes, no time skips.
 ### C2 — pour the concrete · S2-start → B-mould
 ```
 Vertical smartphone video on a tripod, fixed framing, real-time speed, one continuous shot.
-0–1 s: Luna tips the bucket; thick wet concrete pours down into the narrow channel at the front of the left loop.
-1–4 s: she pours on round the left loop; the channel fills to the top.
-4–7 s: she moves the stream through the centre and round the right loop; it fills level.
-7–8 s: she lifts the empty bucket away; the whole channel is full, level and glossy.
-One continuous motion, no pause, no jump. The stream only lands in the channel between the walls; the loop centres stay empty. The mould keeps exactly the same shape.
-Natural motion blur, true colors, no grading, afternoon sun from camera left.
-SFX: heavy wet concrete glugging and slapping, bucket scraping. Ambient: birds.
-No music, no voices, no on-screen text, no sudden changes, no time skips.
+0–1 s: Luna rests the bucket lip on the top of the front outer wall of the left loop; concrete runs down inside that wall into the narrow gap.
+1–4 s: she slides the lip along the outer wall round the left loop; the gap fills.
+4–7 s: she keeps the lip on the outer wall round the right loop; that gap fills.
+7–8 s: she lifts the empty bucket away; the gap is full and level.
+Concrete only runs down the outer wall into the gap. The round middles stay empty bare cardboard; nothing falls into them. One continuous motion, no jump.
+Natural motion blur, true colors, afternoon sun from camera left.
+SFX: wet concrete glugging, bucket scraping. Ambient: birds.
+No music, no voices, no on-screen text, no time skips.
 ```
 
 ### C3 — peel the cardboard off the cured concrete · S3-start → S3-end
