@@ -3,7 +3,7 @@
 **Title:** I Made a $500 Christmas Tree From a Laundry Basket 🎄
 **Source:** same-idea/682453613130034156.mp4 (17.4 s, 7 shots)
 **Tags:** [cat:holiday-decor · luxury-living→luxury-living · payoff:night-glow · fmt:B · end:orbit · source:same-idea/682453613130034156.mp4]
-**Status:** planned · frames: 0/14 · clips: 0/7 · edited: no
+**Status:** frames done and approved (13/13) · clips: 7/7 · edited: yes, output/final.mp4 (34.2 s)
 
 Written to [the realism playbook](../../brand/realism-playbook.md) (incl. §6 Quality and the camera language of luna-plan §2d). Clips by hand with [MANUAL.md](MANUAL.md).
 

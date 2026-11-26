@@ -1,60 +1,60 @@
 {
- "output": "output/final.mp4",
- "format": "steps",
- "clip_db": 0,
- "grain": 3,
- "logo": "brand/logo.png",
- "logo_y": 0.1,
- "loop": 0.4,
- "segments": [
-  {
-   "clip": "clips/C1.mp4",
-   "start": 0.0,
-   "end": 7.5,
-   "speed": 1.5,
-   "label": "OPEN: Luna binds bamboo stakes over the laundry basket (action from frame 0)"
-  },
-  {
-   "clip": "clips/C2.mp4",
-   "start": 0.0,
-   "end": 7.0,
-   "speed": 1.5,
-   "label": "wrapping frosted noble fir garland into full evergreen cone"
-  },
-  {
-   "clip": "clips/C3.mp4",
-   "start": 0.0,
-   "end": 6.8,
-   "speed": 1.5,
-   "label": "stringing warm micro fairy lights down branches"
-  },
-  {
-   "clip": "clips/C4.mp4",
-   "start": 0.0,
-   "end": 6.8,
-   "speed": 1.5,
-   "label": "hanging champagne gold baubles and velvet ribbons"
-  },
-  {
-   "clip": "clips/C5.mp4",
-   "start": 0.0,
-   "end": 7.0,
-   "speed": 1.4,
-   "label": "placing the illuminated crystal star topper"
-  },
-  {
-   "clip": "clips/C6.mp4",
-   "start": 0.0,
-   "end": 6.5,
-   "speed": 1.4,
-   "label": "arranging chunky knit skirt and wrapped gift boxes"
-  },
-  {
-   "clip": "clips/C7.mp4",
-   "start": 0.0,
-   "end": 7.5,
-   "speed": 1.0,
-   "label": "reveal & night glow orbit, snow outside floor-to-ceiling windows"
-  }
- ]
+    "output": "output/final.mp4",
+    "format": "steps",
+    "clip_db": 0,
+    "grain": 3,
+    "logo": "brand/logo.png",
+    "logo_y": 0.1,
+    "loop": 0.4,
+    "segments": [
+        {
+            "clip": "clips/C1.mp4",
+            "start": 0.0,
+            "end": 7.5,
+            "speed": 1.5,
+            "label": "OPEN: Luna binds bamboo stakes over the laundry basket (action from frame 0)"
+        },
+        {
+            "clip": "clips/C2.mp4",
+            "start": 0.0,
+            "end": 7.0,
+            "speed": 1.5,
+            "label": "wrapping frosted noble fir garland into full evergreen cone"
+        },
+        {
+            "clip": "clips/C3.mp4",
+            "start": 0.0,
+            "end": 6.8,
+            "speed": 1.5,
+            "label": "stringing warm micro fairy lights down branches"
+        },
+        {
+            "clip": "clips/C4.mp4",
+            "start": 0.0,
+            "end": 6.8,
+            "speed": 1.5,
+            "label": "hanging champagne gold baubles and velvet ribbons"
+        },
+        {
+            "clip": "clips/C5.mp4",
+            "start": 0.0,
+            "end": 7.0,
+            "speed": 1.4,
+            "label": "placing the illuminated crystal star topper"
+        },
+        {
+            "clip": "clips/C6.mp4",
+            "start": 0.0,
+            "end": 6.5,
+            "speed": 1.4,
+            "label": "arranging chunky knit skirt and wrapped gift boxes"
+        },
+        {
+            "clip": "clips/C7.mp4",
+            "start": 0.0,
+            "end": 7.5,
+            "speed": 1.3,
+            "label": "reveal & night glow orbit, snow outside floor-to-ceiling windows"
+        }
+    ]
 }
